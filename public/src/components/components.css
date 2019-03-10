@@ -1,0 +1,2118 @@
+
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+.hidden-instagram-slideshow-image-loader {
+
+	position: absolute;
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+	top: 0px;
+	z-index: -50;
+
+}
+
+.instagram-slideshow-previous {
+
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba(255, 255, 255, 0.1);
+	z-index: 300;
+	right: 90%;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	cursor: pointer;
+
+
+}
+
+.instagram-slideshow-previous > i {
+
+	align-self: center;
+	color: white;
+	font-weight: bold;
+	font-size: 3rem;
+	opacity: 0.1;
+	cursor: pointer;
+	-webkit-transition-property: opacity, color;
+	-moz-transition-property: opacity, color;
+	-o-transition-property: opacity, color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	
+
+}
+
+.instagram-slideshow-next {
+
+	position: absolute;
+	right: 0px;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+	top: 0px;
+	bottom: 0px;
+	background-color: rgba(255, 255, 255, 0.1);
+	z-index: 300;
+	left: 90%;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	cursor: pointer;
+
+
+}
+
+.instagram-slideshow-next > i {
+
+	align-self: center;
+	color: white;
+	font-weight: bold;
+	font-size: 3rem;
+	opacity: 0.1;
+	cursor: pointer;
+	-webkit-transition-property: opacity, color;
+	-moz-transition-property: opacity, color;
+	-o-transition-property: opacity, color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	
+
+}
+
+
+.instagram-slideshow-previous:hover {
+
+	background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.instagram-slideshow-next:hover {
+
+	background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.instagram-slideshow-previous:hover > i {
+
+	opacity: 0.8;
+	color: black;
+
+}
+
+.instagram-slideshow-next:hover > i {
+
+	opacity: 0.8;
+	color: black;
+
+}
+
+
+
+.instagram-post-large {
+
+	position: fixed;
+	display: none;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 5px;
+	z-index: 185;
+	
+}
+
+.instagram-post-large-content {
+
+	display: grid;
+	grid-template-columns: 1fr 0.5fr;
+	grid-template-rows: auto;
+	position: absolute;
+	top: 15%;
+	bottom: 10%;
+	left: 5%;
+	right: 5%;
+	background-color: white;
+	border-radius: 5px;
+	z-index: 195;
+
+}
+
+.large-image-cointaner {
+
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+
+}
+
+.instagram-post-large-image {
+
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	background-size: contain;
+	background-position: center;
+	position: absolute;
+	opacity: 0;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+
+}
+
+.instagram-post-large-image-visible {
+
+	opacity: 1;
+
+}
+
+.large-image-cointaner {
+
+	position: relative;
+	display: flex;
+	background-color: white;
+
+}
+
+.instagram-post-large-visible {
+
+	display: flex;
+}
+
+.instagram-post-content {
+
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+}
+
+.instagram-post-content-caption > div > a {
+
+	color: black;
+	text-decoration: none;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	font-weight: bold;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+
+}
+
+
+.instagram-post-content-caption > div > a:hover {
+
+	opacity: 0.5;
+
+}
+
+.instagram-post-content-caption > div {
+
+	text-align: center;
+	position: relative;
+
+
+}
+
+.ins-caption {
+
+	overflow: auto;
+	overflow-x: hidden;
+	max-height:  250px;
+	padding: 1rem;
+
+
+}
+
+.footer-icon-ins {
+
+	margin-right: 1rem;
+	margin-left: 0.5rem;
+
+}
+
+.close-instagram-post {
+
+	position: absolute;
+	right: 0.5rem;
+	top: 0.5rem;
+	cursor: pointer;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+
+
+}
+
+.close-instagram-post:hover {
+
+	opacity: 0.5;
+
+}
+
+
+.instagram-post-content-footer > div {
+
+	text-align: center;
+	padding: 1rem;
+
+
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.slideshow-image {
+
+	width: 100%;
+	height: auto;
+	position: relative;
+
+}
+
+body {
+
+	font-family: 'Philosopher', sans-serif;
+	margin: 0;
+
+}
+
+.slideshow-image {
+
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 2s;
+	-moz-transition-duration: 2s;
+	-o-transition-duration: 2s;
+	
+
+}
+
+.slideshow-image0 {
+
+	
+	background-image: url("/slideshow/0.jpg");
+
+
+}
+
+.slideshow-image1 {
+
+
+	background-image: url("/slideshow/1.jpg");
+
+
+}
+
+.slideshow-image2 {
+
+	
+	background-image: url("/slideshow/2.jpg");
+
+
+}
+
+.slideshow-image3 {
+
+
+	background-image: url("/slideshow/3.jpg");
+
+
+}
+
+.slideshow-image4 {
+
+
+	background-image: url("/slideshow/4.jpg");
+
+
+}
+
+
+.slideshow-image5 {
+
+
+	background-image: url("/slideshow/5.jpg");
+
+}
+
+.instruktor-image-container {
+
+	width: 100%;
+	height: 50%;
+	position: relative;
+
+}
+
+.small-instruktor {
+
+	display: none;
+
+
+}
+
+.instruktor-image {
+
+
+	background-image: url("/instruktor.jpg");
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	
+
+}
+
+
+.black-background {
+
+	background-color: #000002;
+
+}
+
+.black-background > p {
+
+	font-size: 1.1rem;
+	color: white;
+
+}
+
+.blackscreen {
+
+	width: 100%;
+	height: 100%;
+	background-color: #000004;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+
+}
+
+.slideshow-container {
+
+	position: relative;
+	width: 100%;
+	height: 100%;	
+	display: flex;
+	
+}
+
+
+.slideshow {
+
+	position: relative;
+	justify-content: center;
+	background-color: black;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 2s;
+	-moz-transition-duration: 2s;
+	-o-transition-duration: 2s;
+	
+}
+
+.header {
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	
+
+}
+
+nav {
+
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: flex-end;
+	top: 0;
+	padding-left: 0rem;
+	padding-right: 0rem;
+
+}
+
+nav a {
+
+	text-decoration: none;
+	font-size: 1.2rem;
+	align-self: center;
+	color: white;
+	padding: 1rem;
+	opacity: 1;
+	background-color: #000004;
+	-webkit-transition-property: background-color, color;
+	-moz-transition-property: background-color, color;
+	-o-transition-property: background-color, color;
+	-webkit-transition-duration: 800ms;
+	-moz-transition-duration: 800ms;
+	-o-transition-duration: 800ms;
+
+}
+
+nav a:hover {
+
+	background-color: white;
+	color: black
+
+}
+
+
+.info {
+
+	position: relative;
+	display: grid;
+	grid-template-columns: 0.5fr 1fr;
+	grid-template-rows: 80vh;
+
+}
+
+.slogan {
+
+	font-size: 1.8rem;
+	align-self: center;
+	
+}
+
+.social-media {
+
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+
+}
+
+.social-media a {
+
+	color: white;
+	text-decoration: none;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: opacity;
+	-o-transition-duration: 500ms;
+	
+
+}
+
+.social-media a:hover {
+
+	opacity: 0.5;
+
+}
+
+.welcome-text {
+
+	width: 100%;
+	height: 100%;
+	bottom: 0px;
+	background-color: #000004;
+	position: absolute;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+	
+
+}
+
+
+.small-logo {
+
+	font-size: 1.2rem;
+	display: block;
+	margin-bottom: 1rem;
+	align-self: center;
+
+}
+
+
+.introduction {
+
+	color: white;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 0px;
+	z-index: 1;
+
+}
+
+.introduction span {
+
+	align-self: center;
+	display: block;
+	width: 100%;
+	opacity: 0;
+	text-align: center;
+	-webkit-transition-property: opacity, transform;
+	-moz-transition-property: opacity, transform;
+	-o-transition-property: opacity, transform;
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-o-transform: translateY(-50px);
+	-webkit-transition-duration: 800ms;
+	-moz-transition-duration: 800ms;
+	-o-transition-duration: 800ms;
+	white-space: nowrap;
+  	overflow: hidden;
+
+}
+
+.drop-menu {
+
+	position: absolute;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: 15;
+	opacity: 0;
+	visibility: hidden;
+	width: 100%;
+	background-color: yellow;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: opacity;
+	-o-transition-duration: 500ms;
+
+}
+
+.links {
+
+	padding: 0px;
+
+
+}
+
+.links a {
+
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	font-size: 1.3rem;
+	padding: 1rem;
+	opacity: 1;
+	font-weight: bold;
+	-webkit-transition-property: color, background-color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-property: color, background-color;
+	-moz-transition-duration: 1s;
+	-o-transition-property: color, background-color;
+	-o-transition-duration: 1s;
+
+}
+
+.links a:hover {
+
+	background-color: black;
+	color: white;
+
+}
+
+
+.visual {
+
+	width: 3.5rem;
+	position: absolute;
+	bottom: 0px;
+	right:0px;
+	background-color: yellow;
+	height: 0%;
+	-webkit-transition-property: height;
+	-webkit-transition-duration: 800ms;
+	-moz-transition-property: height;
+	-moz-transition-duration: 800ms;
+	-o-transition-property: height;
+	-o-transition-duration: 800ms;
+
+}
+
+.instagram-transition-helper {
+
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+
+}
+
+.instagram-placeholder {
+
+	width: 100%;
+	height: 200px;
+
+
+}
+
+
+.menu {
+
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	font-size: 1.5rem;
+	color: yellow;
+	z-index: 15;
+	cursor: pointer;
+	opacity: 1;
+	-webkit-transition-property: color;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: color;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: color;
+	-o-transition-duration: 500ms;
+
+}
+
+.instagram-fix-last-child {
+
+	position: relative;
+
+}
+
+.menu:hover {
+
+	color: white;
+
+}
+
+.menu:focus {
+
+	color: white;
+
+}
+
+.logo-cont {
+
+	padding: 1rem;
+
+}
+
+
+.logo {
+
+	font-weight: 500;
+	text-decoration: none;
+	color: white;
+	opacity: 1;
+	display: inline;
+	font-size: 1.3rem;
+	z-index: 15;
+	display: inline;
+	position: relative;
+	cursor: pointer;
+
+}
+
+
+.logo-container {
+
+	padding: 0rem;
+	position: sticky;
+	top: 0px;
+	display: grid;
+	width: 100%;
+	grid-template-columns: 0.5fr 1fr;
+	background-color: white;
+	text-align: middle;
+	z-index: 200;
+	background-color: #000004;
+	
+
+}
+
+.sildeshow-image {
+
+	position: absolute;
+    	float: left;
+	height: 80vh;
+	width: 100%;
+    	background-position: 50% 50%;
+    	background-repeat:   no-repeat;
+    	background-size:     cover;
+	background-color: black;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+
+}
+
+.dot {
+
+	background-color: #000004;
+	display: inline-block;
+	height: 7px;
+	width: 7px;
+	margin-right: 0.5rem;
+	cursor: pointer;
+	border-radius: 50%;
+	position: relative;
+
+}
+
+.active-dot {
+
+	margin-right: 0.5rem;
+	display: inline-block;
+	cursor: pointer;
+	height: 15px;
+	position: relative;
+	width: 15px;
+	border-radius: 50%;
+	position: relative;
+	top: 0.2rem;
+	background-color: white;
+
+
+}
+
+.dot:hover {
+
+	background-color: white;
+
+}
+
+.dots {
+
+	position: absolute;
+	text-align: center;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 100;
+	animation: fadein 2s;
+
+}
+
+
+@keyframes fadein {
+
+    from { opacity: 0; }
+    to   { opacity: 1; }
+
+}
+
+/* INFORMATION */
+
+
+.first-section {
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+}
+
+.facebook-page-plugin {
+
+	
+	padding: 2rem;
+	padding-top: 5rem;
+	text-align: center;
+	
+
+}
+
+.about-us > p {
+
+	line-height: 1.5rem;
+	padding: 4rem;
+
+}
+
+.about-us-text-intro {
+
+	opacity: 0;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-webkit-transition-timing-function: ease-in;
+	-moz-transition-timing-function: ease-in;
+	-o-transition-timing-function: ease-in;
+	
+
+
+}
+
+.about-us-text-intro-visible {
+
+	opacity: 1;
+
+
+}
+
+.about-us-title {
+
+	text-align: center;
+	font-family: inherit;
+	font-weight: bold;
+	padding: 1rem;
+	background-color: white;
+	color: black;
+
+}
+
+.about-us-facebook {
+
+	text-align: center;
+	font-family: inherit;
+	font-weight: bold;
+	padding: 1rem;
+	background-color: black;
+	color: white;
+
+}
+
+.about-us-facebook a {
+
+	font-weight: bold;
+	text-decoration: none;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: opacity;
+	-o-transition-duration: 500ms;
+	color: white;
+
+}
+
+.about-us-facebook a:hover {
+
+
+	opacity: 0.5;
+
+}
+
+.about-us-instagram a {
+
+	font-weight: bold;
+	text-decoration: none;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: opacity;
+	-o-transition-duration: 500ms;
+	color: black;
+	
+}
+
+.about-us-instagram a:hover {
+
+
+	opacity: 0.5;
+
+}
+
+.about-us-instagram {
+
+
+}
+
+.second-section {
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+}
+
+
+.instagram-posts {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 1rem;
+	margin-bottom: 1rem;
+	position: relative;
+	transition-property: opacity;
+	transition-duration: 700ms;
+	padding: 1rem;
+
+
+}
+
+.instagram-position-helper {
+
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 0%;
+
+}
+
+
+.instagram-post {
+
+	background-color: white;
+	display: block;
+	-moz-transform: translate(-100px, 0%);
+	-webkit-transform: translate(-100px, 0%);
+	-o-transform: translate(-100px, 0%);
+	-ms-transform: translate(-100px, 0%);
+	transform: translate(-100px, 0%);
+	opacity: 0;
+	-webkit-transition-property: opacity, transform;
+	-moz-transition-property: opacity, transofrm;
+	-o-transition-property: opacity, transform;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+
+}
+
+.instagram-post-visible {
+
+	-moz-transform: translate(0px, 0%);
+	-webkit-transform: translate(0px, 0%);
+	-o-transform: translate(0px, 0%);
+	-ms-transform: translate(0px, 0%);
+	transform: translate(0px, 0%);
+	opacity: 1;
+
+
+}
+
+
+.instagram-post > span {
+
+	color: white;
+	display: block;
+
+}
+
+.instagram-post > div > i {
+
+	color: white;
+	margin-bottom: 1rem;
+	margin-right: 0.5rem;
+
+}
+
+.youtube-video-presentation {
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+}
+
+.youtube-video-presentation > iframe {
+
+	margin: auto;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+
+}
+
+.footer {
+
+	background-color: #000004;
+	color: white;
+	position: relative;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+
+}
+
+.footer > span {
+
+	align-self: center;
+	font-size: 0.8rem;
+	
+}
+
+.footer > span > a {
+
+	color: grey;
+	text-decoration: none;
+	font-size: 0.8rem;
+
+}
+
+.social-media-footer {
+
+	margin-left: 1rem;
+	text-align: center;
+	padding: 0.2rem;
+
+
+}
+
+.social-media-footer a {
+
+	font-size: 1.3rem;
+	color: white;
+	text-decoration: none;
+	margin-right: 0.5rem;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: opacity;
+	-o-transition-duration: 500ms;
+
+}
+
+.social-media-footer a:hover {
+
+
+	opacity: 0.5;
+
+}
+
+.seperator {
+
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+}
+
+
+
+/*    TERMINI      */
+
+
+.termini-container {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+
+}
+
+.instructor-header {
+
+	background-color: #000004;
+	padding: 1rem;
+	text-align: center;
+	color: white;
+	font-weight: bold;	
+
+}
+
+.termini {
+
+	background-color: #000002;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 5rem;
+
+
+
+}
+
+.termini-table {
+
+	padding: 1rem;
+	color: white;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 5rem;
+
+
+}
+
+.termini-table th {
+
+	padding: 1rem;
+
+
+}
+
+.termini-table td {
+
+	padding: 0.5rem;
+	width: 50%;
+
+
+}
+
+.instructor {
+
+	display: flex;
+	flex-direction: column;
+
+
+}
+
+.instructor-c {
+
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;
+	vertical-align: middle;
+	width: 70%;
+	margin: auto;
+	height: 100%;
+	margin-bottom: 2rem;
+	
+
+}
+
+.instructor-c img {
+
+	
+	width: 100%;
+	height: auto;
+	
+
+}
+
+.instructor-name {
+
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	color: #000004;
+
+}
+
+/* KONTAKT */
+
+.kontakt-container {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
+
+.instructor-number {
+
+	text-align: center;
+	display: block;
+	font-weight: bold;
+	padding: 0.5rem;
+	font-size: 1rem;
+	color: #000004;
+
+}
+
+.instrucotr-mail {
+
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	color: #000004;
+
+}
+
+.instrucotr-mail a {
+
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+
+}
+
+.null {
+
+	font-weight: 300;
+
+}
+
+.kontakt-objasnjenje {
+
+	padding: 2rem;
+	padding-top: 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+.kontakt-objasnjenje iframe {
+
+	align-self: center;
+	margin-bottom: 2rem;
+
+
+}
+
+.kontakt-objasnjenje span {
+
+	align-self: center;
+
+
+}
+
+.kontakt-objasnjenje ul {
+
+	align-self: center;
+	margin-bottom: 2rem;
+
+
+}
+
+.kontakt-objasnjenje li {
+
+	padding: 0.2rem;
+
+
+}
+
+
+.kontakt-form {
+
+	background-color: #000004;
+	color: white;
+	display: flex;
+	justify-content: center;
+
+}
+
+.kontakt-form input {
+
+	display: block;
+	width: 100%;
+	padding: 0.4rem;
+	padding-left: 0.5rem;
+	box-sizing : border-box;
+	border-style: none;
+	font-size: 1rem;
+	border-radius: 5px;
+	font-family: 'Philosopher', sans-serif;
+
+}
+
+.kontakt-form label {
+
+	display: block;
+	width: 100%;
+	padding: 0.3rem;
+	padding-left: 0rem;
+	box-sizing : border-box;
+
+}
+
+.kontakt-form textarea {
+
+	display: block;
+	width: 100% !important;
+	height: 200px;
+	max-height: 300px;
+	padding: 0.5rem;
+	font-size: 1rem;
+	box-sizing : border-box;
+	border-style: none;
+	border-radius: 5px;
+	max-width: 100%;
+	font-family: 'Philosopher', sans-serif;
+
+
+}
+
+.kontakt-form form {
+
+	width: 60%;
+	align-self: center;
+
+}
+
+.submit-button {
+
+
+	background-color: white;
+	color: #000005;
+	cursor: pointer;
+
+}
+
+.five-k-error {
+
+	-webkit-transition-property: color;
+	-moz-transition-property: color;
+	-o-transition-property: color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+
+
+}
+
+/* INFORMACIJE */
+
+.information-container {
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+
+}
+
+.info-navbar {
+
+	text-align: center;
+
+}
+
+.info-navbar > div {
+
+	display: inline-block;
+	padding: 1rem;
+	cursor: pointer;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-duration: 500ms;
+	-o-transition-duration: 500ms;
+	
+}
+
+.onama {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	padding: 2rem;
+	align-items: center;
+	background-color: #000004;
+	color: white;
+
+}
+
+.youtube-container {
+
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+
+
+}
+
+.youtube-container iframe{
+
+    position: absolute;
+    align-self: middle;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ikmi {
+
+	padding: 2rem;
+	text-align: center;
+	background-color: #000004;
+	color: white;
+
+}
+
+.ikmi > p {
+
+	font-size: 1.1rem;
+
+}
+
+.onama-text > p {
+
+	padding: 2rem;
+	padding-left: 0rem;
+	font-size: 1.1rem;
+
+
+}
+
+.kursevi {
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	padding: 2rem;
+
+}
+
+.kurs-part {
+
+	display: block;
+	margin-bottom: 2rem;
+
+}
+
+.kurs-part > h3 {
+
+	text-align: center;
+	margin-bottom: 3rem;
+
+}
+
+.kurs-content {
+
+	height: auto;
+	display: block;
+	width: 100%;
+	margin-bottom: 1rem;
+
+
+}
+
+.kurs-content > p {
+
+	display: inline;
+	word-wrap: break-word;
+	padding-left: 0rem;
+	font-size: 1.1rem;
+
+
+}
+
+.kurs-image01 {
+
+	width: 50%;
+	height: 350px;
+	float: right;
+	background-image: url("/kursevi/01.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 1rem;
+	margin-top: 0rem;
+	padding-right: 0rem;
+	padding-top: 0rem;
+
+
+}
+
+.kurs-image02 {
+
+	width: 50%;
+	height: 350px;
+	float: right;
+	background-image: url("/kursevi/02.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 1rem;
+	margin-top: 0rem;
+	padding-right: 0rem;
+	padding-top: 0rem;
+
+
+}
+
+.kurs-image03 {
+
+	width: 50%;
+	height: 350px;
+	float: right;
+	background-image: url("/kursevi/03.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 1rem;
+	margin-top: 0rem;
+	padding-right: 0rem;
+	padding-top: 0rem;
+
+
+}
+
+
+
+.kravmaga {
+
+	padding: 2rem;
+	color: white;
+	background-color: #000004;
+
+
+}
+
+
+.kravmaga-slike {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 2rem;
+
+}
+
+.kravmaga > p {
+
+	font-size: 1.1rem;
+
+}
+
+.kravmaga-image1 {
+
+	background-image: url("/kravmaga/01.jpg");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+
+}
+
+.kravmaga-image2 {
+
+	background-image: url("/kravmaga/02.jpg");
+	width: 100%;
+	height: 400px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+
+}
+
+.social-media-small {
+
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	color: black;
+	padding: 0.5rem;
+	background-color: rgba(0, 0, 4, 0.8);
+	border-radius: 5px;
+	display: none;
+
+}
+
+.social-media-small > a {
+
+	color: white;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	
+}
+
+.social-media-small > a:hover {
+
+	opacity: 0.5;
+	
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+	
+	.kontakt-form form {
+
+		width: 80%;
+
+	}
+
+
+
+}
+
+@media only screen and (max-width: 870px) {
+
+	.termini-container {
+
+		grid-template-columns: 1fr;
+
+
+	}
+
+	.kontakt-container {
+
+
+		grid-template-columns: 1fr;
+
+	}
+
+	.kontakt-form form {
+
+		width: 50%;
+		padding: 5rem;
+
+	}
+
+
+
+
+	.instructor-c {
+
+	
+		margin-top: 2rem;
+
+	}
+
+}
+
+@media only screen and (max-width: 808px) {
+  
+
+	.instagram-post-large-content {
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 60% 40%;
+		top: 20%;
+		bottom: 5%;
+		left: 5%;
+		right: 5%;
+
+	}
+
+	
+	.instagram-fix-last-child:last-child {
+
+		display: none;
+
+	}
+
+	
+	.close-instagram-post {
+
+		color: black;
+		top: 62%;
+
+	}
+
+	.ins-caption {
+
+		overflow: auto;
+		overflow-x: hidden;
+		max-height:  20px;
+		padding: 1rem;
+
+
+	}
+
+
+	.links a {
+
+		display: block;
+		position: relative;
+
+	}
+
+	.social-media-small {
+
+		display: block;
+
+	}
+
+
+	.instagram-posts {
+
+		grid-template-columns: 1fr 1fr 1fr;
+
+	}
+
+
+	.info {
+
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 80vh;
+
+	}
+	
+
+	.header {
+
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr;
+	
+	}
+
+
+	.introduction {
+
+		display: none;
+
+	}
+
+	.first-section {
+
+		grid-template-columns: 1fr;
+
+	}
+
+	
+	.second-section {
+
+		grid-template-columns: 1fr;
+
+	}
+
+	.youtube-video-presentation > iframe {
+
+		width: 80%;
+		
+	}
+
+	.facebook-page-plugin {
+
+		padding: 0.5rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		text-align: center;
+
+	}
+
+	.onama {
+
+		grid-template-columns: 1fr;
+
+	}
+
+	.kurs-content > p {
+
+		display: block;
+		padding: 0px;
+
+
+
+	}
+
+	
+	
+
+	.onama-text > p {
+
+		padding: 0rem;
+		margin-bottom: 2rem;
+
+	}
+
+	.kravmaga-slike {
+
+		grid-template-columns: 1fr;
+
+	}
+
+	
+
+	.small-instruktor {
+
+		display: block;
+		height: auto;
+		width: 100%;
+
+
+	}
+
+	
+
+
+
+
+}
+
+
+
+@media only screen and (max-width: 700px) { 
+
+	.footer {
+
+		flex-direction: column;
+		padding-bottom: 0.5rem;
+
+	}
+	
+	.kontakt-form form {
+
+		width: 80%;
+
+	}
+
+	.logo-container {
+
+		grid-template-columns: 1fr 1fr;
+
+	}
+
+	.seperator {
+
+		display: none;
+
+	}
+
+	.footer > span {
+
+		margin-bottom: 0.5rem;
+	
+	}
+
+	.about-us > p {
+
+		padding: 3rem;
+
+	}
+
+}
+
+@media only screen and (max-width: 500px) { 
+
+	.instagram-posts {
+
+		grid-template-columns: 1fr 1fr;
+
+	}
+
+	.instagram-fix-last-child:last-child {
+
+		display: block;
+
+	}
+
+	.instagram-slideshow-previous {
+	
+		right: 85%;	
+
+	}
+
+	.instagram-slideshow-next {
+	
+		left: 85%;	
+
+	}
+
+	nav {
+
+		display: flex;
+		justify-content: center;
+
+	}
+
+	nav > a:last-child {
+
+		margin: 0px;
+
+	}
+
+	.logo-cont {
+
+		display: flex;
+		justify-content: center;
+		padding-bottom: 1rem;
+
+	}
+
+
+	.logo-container {
+
+		grid-template-columns: 1fr;
+
+	}
+
+	.kontakt-form form {
+
+		width: 100%;
+		padding: 2rem;
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+
+	}
+
+	.kontakt-objasnjenje {
+
+		padding: 0.5rem;
+		padding-top: 4rem;
+
+	}
+
+	.kontakt-objasnjenje iframe {
+
+		width: 300px;
+
+	}
+
+	.kurs-image01 {
+
+		width: 100%;
+		background-image: url("/kursevi/01-small.jpg");
+		margin: 0px;
+		margin-bottom: 1rem;
+
+	}
+
+	.kurs-image02 {
+
+		width: 100%;
+		background-image: url("/kursevi/02-small.jpg");
+		margin: 0px;
+		margin-bottom: 1rem;
+
+	}
+
+	.kurs-image03 {
+
+		width: 100%;
+		background-image: url("/kursevi/03-small.jpg");
+		margin: 0px;
+		margin-bottom: 1rem;
+
+	}
+
+	.instruktor-image {
+
+		background-image: url("/instruktor-small.jpg");
+		background-size: contain;
+		display: none;
+
+	}
+
+	.kravmaga-image1 {
+
+		background-image: url("/kravmaga/01-small.jpg");
+
+	}
+
+	.kravmaga-image2 {
+
+		background-image: url("/kravmaga/02-small.jpg");
+
+
+	}
+
+	
+	.slideshow-image0 {
+
+	
+		background-image: url("/slideshow/0-small.jpg");
+
+
+	}
+
+	.slideshow-image1 {
+
+
+		background-image: url("/slideshow/1-small.jpg");
+
+
+	}
+
+	.slideshow-image2 {
+
+	
+		background-image: url("/slideshow/2-small.jpg");
+
+
+	}
+
+	.slideshow-image3 {
+
+
+		background-image: url("/slideshow/3-small.jpg");
+
+
+	}
+
+	.slideshow-image4 {
+
+
+		background-image: url("/slideshow/4-small.jpg");
+
+
+	}
+
+
+	.slideshow-image5 {
+
+
+		background-image: url("/slideshow/5-small.jpg");
+
+	}
+
+
+	
+}
+
+
+@media only screen and (max-width: 400px) { 
+
+
+	
+}
+
+
+
+	
+
