@@ -41,6 +41,11 @@ class Kontakt extends Component {
 			let message = messageTarget.value.trim();
 			this.setState({messageError: false});
 
+				mailTarget.disabled = true;
+				nameTarget.disabled = true;
+				subjectTarget.disabled = true;
+				messageTarget.disabled = true;
+
 			axios.post("/mail", { 
 
 					      email: email,
@@ -80,6 +85,10 @@ class Kontakt extends Component {
 
 					if (res.data.sent) {
 
+						mailTarget.disabled = false;
+						nameTarget.disabled = false;
+						subjectTarget.disabled = false;
+						messageTarget.disabled = false;
 						mailTarget.value = "";
 						nameTarget.value = "";
 						subjectTarget.value = "";
@@ -89,7 +98,10 @@ class Kontakt extends Component {
 					
 					}).catch((e) => {
 
-						
+						mailTarget.disabled = false;
+						nameTarget.disabled = false;
+						subjectTarget.disabled = false;
+						messageTarget.disabled = false;
 						this.setState({nameError: true,
 							       emailError: true,
 							       subjectError: true,
@@ -250,7 +262,7 @@ class Kontakt extends Component {
 			<span>Kontaktirati nas mozete:</span>
 			<ul>	
 			<li>Pozivom na broj telefona: <span style={{fontWeight: "bold"}}>+387 61 998 742 (Mirza)</span></li>
-			<li>Na E-mail adresi: <span style={{fontWeight: "bold"}}>kravmagatuzla@outlook.com</span></li>
+			<li>E-mail: <span style={{fontWeight: "bold"}}><a style={{ color: "black", textDecoration: "none" }} aria-label="mail-to" className="mail-to" href="mailto:mirza@kravmagatuzla.ba" target="_top">mirza@kravmagatuzla.ba</a></span></li>
 			<li>Preko kontakt forme</li>
 			<li><span style={{fontWeight: "bold"}}>Facebook</span> ili <span style={{fontWeight: "bold"}}>Instagram</span></li>
 			</ul>	

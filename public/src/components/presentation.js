@@ -21,7 +21,8 @@ class Presentation2 extends Component {
 			images: ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"],
 			number: false,
 			text: false,
-			ready: false
+			ready: false,
+			innerWidth: 0
 
 		}
 
@@ -30,6 +31,7 @@ class Presentation2 extends Component {
 		this.startInterval = this.startInterval.bind(this);
 
 		this.showComponent = this.showComponent.bind(this);
+
 
 	}
 
@@ -148,9 +150,6 @@ class Presentation2 extends Component {
     }
 	componentDidMount() {
 
-		let img = new Image();
-        	img.src = `/slideshow/0.1.jpg`;
-		img.onload = () => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}
 		document.title = this.props.location;
 
 		this.startInterval();
@@ -177,7 +176,7 @@ class Presentation2 extends Component {
 
 		}
 	
-		this.setState({text: true});
+		this.setState({text: true, innerWidth: window.innerWidth});
   
 	}
 
@@ -209,6 +208,13 @@ class Presentation2 extends Component {
 		let zIndex = "flex";
 		let visible = 1;
 		let content;
+		let img = "/slideshow/0.1.jpg";
+
+		if (this.state.innerWidth < 501) {
+
+			img = "/slideshow/0-small.jpg";
+		
+		}
 
 		if (this.state.ready) {
 
@@ -248,11 +254,12 @@ class Presentation2 extends Component {
 		}
 
 			content = <React.Fragment>
+ <img src={img} onLoad={() => { this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />
 <SiteMetaData />
 <div className="logo-container"><div className="logo-cont"><Link className="logo" to="/" >KRAV MAGA TUZLA</Link></div><nav><Link style={selectedInformacije} to="/informacije">Info</Link><Link style={selectedKontakt} to="/contact">Kontakt</Link></nav></div>
 
 <div className="info">
- 
+
 <div className="introduction"><div className="welcome-text"><span style={text} className="slogan"><span  style={text}  className="small-logo" >Krav Maga IKMI Tuzla</span>{this.props.title}</span><div className="social-media"><a aria-label="facebook" className="facebook" href="https://www.facebook.com/408588132922283/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a> <a aria-label="instagram" className="instagram" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></div> </div></div>
 
 <div className="slideshow"><div style={opacity} className="slideshow-container">{this.state.images.map((image, index) => {
