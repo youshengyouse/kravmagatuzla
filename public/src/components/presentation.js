@@ -7,7 +7,7 @@ import SiteMetaData from "./site-metadata";
 
 const mapStateToProps = state => {
 
-    return {number: state.slideshow.number, dropdown: state.slideshow.dropdown, loaded: state.slideshow.loaded};
+    return {number: state.slideshow.number, ready: state.slideshow.ready, zIndex: state.slideshow.zIndex};
 
 };
 
@@ -49,6 +49,8 @@ class Presentation2 extends Component {
 		let target = e.target;
 		
 		clearInterval(this.intervalId);
+
+		if (this.dotContainer.current) {
 		
 		for (let item of this.dotContainer.current.children) {
 
@@ -63,6 +65,8 @@ class Presentation2 extends Component {
 				item.className = "dot";
 
 			}
+
+		}
 
 		}
 
@@ -90,6 +94,9 @@ class Presentation2 extends Component {
 	
 
 		this.props.dispatch({type: "UPDATE_NUMBER", number: num});
+
+		if (this.dotContainer.current) {		
+
 		for (let item of this.dotContainer.current.children) {
 
 			let num2 = num;
@@ -107,6 +114,8 @@ class Presentation2 extends Component {
 			}
 
 		}
+
+		}
 		
     		this.setState({number: num});
 	
@@ -118,13 +127,13 @@ class Presentation2 extends Component {
 
 	static getDerivedStateFromProps(nextProps, prevState) {
 
-        if (prevState.number !== nextProps.number || prevState.dropdown !== nextProps.dropdown || prevState.loaded !== nextProps.loaded) {
+        if (prevState.number !== nextProps.number || prevState.ready !== nextProps.ready || prevState.zIndex !== nextProps.zIndex) {
 
             return {
 
                 		number: nextProps.number,
-				dropdown: nextProps.dropdown,
-				loaded: nextProps.loaded
+				ready: nextProps.ready,
+				zIndex: nextProps.zIndex
 
             }
 
@@ -141,10 +150,12 @@ class Presentation2 extends Component {
 
 		let img = new Image();
         	img.src = `/slideshow/0.1.jpg`;
-		img.onload = () => {this.setState({ ready: true })}
+		img.onload = () => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}
 		document.title = this.props.location;
 
 		this.startInterval();
+
+		if (this.dotContainer.current) {
 		
 		for (let item of this.dotContainer.current.children) {
 
@@ -164,8 +175,8 @@ class Presentation2 extends Component {
 
 		} 
 
+		}
 	
-        			
 		this.setState({text: true});
   
 	}
@@ -177,6 +188,17 @@ class Presentation2 extends Component {
 
 	}
 
+	componentDidUpdate() {
+
+		if (this.state.ready && this.state.zIndex === 10000) {
+
+			window.setTimeout(() => {this.props.dispatch({ type: "ZINDEX" })}, 1000);
+
+		}
+
+
+	}
+
 	render() {
 
 		let text;
@@ -184,13 +206,23 @@ class Presentation2 extends Component {
 		let selectedKontakt;
 		let selectedInformacije;
 		let opacity;
+		let zIndex = "flex";
+		let visible = 1;
+		let content;
 
 		if (this.state.ready) {
 
-			opacity = {opacity: 1}
+			opacity = {opacity: 1};
+			visible = 0;
 
+			if (this.state.zIndex === -10000) {
+
+				zIndex = "none";
+
+			}
+			
 		}
-
+	
 		if (this.state.text) {
 
 			text = {transform: "translateY(0px)", opacity: 1};
@@ -215,9 +247,9 @@ class Presentation2 extends Component {
 
 		}
 
-		return (<React.Fragment>
+			content = <React.Fragment>
 <SiteMetaData />
-<div className="logo-container"><div className="logo-cont"><Link className="logo" to="/" >KRAV MAGA TUZLA</Link></div><nav><Link style={selectedInformacije} to="/informacije">Info</Link><Link style={selectedTermini} to="/termini">Termini</Link><Link style={selectedKontakt} to="/contact">Kontakt</Link></nav></div>
+<div className="logo-container"><div className="logo-cont"><Link className="logo" to="/" >KRAV MAGA TUZLA</Link></div><nav><Link style={selectedInformacije} to="/informacije">Info</Link><Link style={selectedKontakt} to="/contact">Kontakt</Link></nav></div>
 
 <div className="info">
  
@@ -260,8 +292,15 @@ return <div className={`slideshow-image slideshow-image${index}`} key={key} styl
 
 {this.props.children}
 	<Footer />
+<div style={{ opacity: visible, transitionDuration: "1s", transitionProperty: "opacity", textAling: "center", justifyContent: "center", position: "fixed", top: "0px", bottom: "0px", right: "0px", left: "0px", backgroundColor: "black", zIndex: this.state.zIndex, display: zIndex }} >
 
-</React.Fragment>)
+<div style={{ position: "relative", top: "40%" }} className="lds-facebook"><div></div><div></div><div></div></div>
+
+</div>
+</React.Fragment>;
+
+
+		return (<React.Fragment>{content}</React.Fragment>)
 
 
 	}

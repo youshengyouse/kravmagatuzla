@@ -16,7 +16,7 @@
     "axios": "^0.18.0",
     "facebook-plugins": "^1.0.5",
     "gatsby": "^2.1.4",
-    "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-manifest": "^2.0.25",
     "gatsby-plugin-offline": "^2.0.23",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-source-facebook": "^1.0.2",

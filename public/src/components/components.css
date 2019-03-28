@@ -2,6 +2,44 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher');
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+  50%, 100% {
+    top: 19px;
+    height: 26px;
+  }
+}
+
+
 .hidden-instagram-slideshow-image-loader {
 
 	position: absolute;
@@ -863,7 +901,7 @@ nav a:hover {
 .first-section {
 
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr 1fr;
 
 }
 
@@ -881,6 +919,7 @@ nav a:hover {
 
 	line-height: 1.5rem;
 	padding: 4rem;
+	padding-top: 5rem;
 
 }
 
@@ -1168,7 +1207,7 @@ nav a:hover {
 	background-color: #000002;
 	display: flex;
 	justify-content: center;
-	flex-direction: column;
+	flex-direction: row;
 	padding-top: 5rem;
 
 
@@ -1177,12 +1216,12 @@ nav a:hover {
 
 .termini-table {
 
-	padding: 1rem;
+	padding: 2rem;
+	padding-top: 0rem;
 	color: white;
 	text-align: center;
-	margin: auto;
-	margin-bottom: 5rem;
-
+	margin-bottom: 3rem;
+	margin-top: 0rem;
 
 }
 
@@ -1696,6 +1735,7 @@ nav a:hover {
 
 	}
 
+
 	.kontakt-container {
 
 
@@ -1722,8 +1762,20 @@ nav a:hover {
 
 }
 
-@media only screen and (max-width: 808px) {
+@media only screen and (max-width: 900px) {
   
+	.termini-table {
+
+		margin-top: 0rem;
+
+	}
+
+	
+	.termini {
+
+		padding-top: 0px;
+
+	}
 
 	.instagram-post-large-content {
 
@@ -1928,17 +1980,29 @@ nav a:hover {
 
 }
 
-@media only screen and (max-width: 500px) { 
-
+@media only screen and (max-width: 600px) {
+	
 	.instagram-posts {
 
 		grid-template-columns: 1fr 1fr;
 
 	}
 
+	
 	.instagram-fix-last-child:last-child {
 
 		display: block;
+
+	}
+
+
+}
+
+@media only screen and (max-width: 500px) { 
+
+	.termini {
+
+		flex-direction: column;
 
 	}
 

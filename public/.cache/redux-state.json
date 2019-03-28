@@ -1,0 +1,2146 @@
+{
+  "nodes": {
+    "SitePage /dev-404-page/": {
+      "jsonName": "dev-404-page-5f9",
+      "internalComponentName": "ComponentDev404Page",
+      "path": "/dev-404-page/",
+      "component": "/var/www/krav/.cache/dev-404-page.js",
+      "componentChunkName": "component---cache-dev-404-page-js",
+      "isCreatedByStatefulCreatePages": true,
+      "context": {},
+      "pluginCreator___NODE": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "pluginCreatorId": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "componentPath": "/var/www/krav/.cache/dev-404-page.js",
+      "id": "SitePage /dev-404-page/",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "aa51c8dfac2d4dd216825273d0793d53",
+        "description": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5": {
+      "resolve": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "id": "d48d1c52-fe48-53cb-8f08-aa4b47dde5a5",
+      "name": "dev-404-page",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/dev-404-page",
+      "packageJson": {
+        "name": "dev-404-page",
+        "description": "Internal plugin to add a 404 page in development with helpful information",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "288f06fd2670d2d9b21f5fd9bb9ea92f",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1fc32581-893a-55e8-8927-bcd667e2b700": {
+      "resolve": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "id": "1fc32581-893a-55e8-8927-bcd667e2b700",
+      "name": "load-babel-config",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onPreBootstrap"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/load-babel-config",
+      "packageJson": {
+        "name": "load-babel-config",
+        "description": "Internal plugin that handles loading Babel configs",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "b653a65071deb2875061adee8e488a7e",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "a5079d69-ba80-53dc-82f9-0f440bd5448c": {
+      "resolve": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "id": "a5079d69-ba80-53dc-82f9-0f440bd5448c",
+      "name": "internal-data-bridge",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "sourceNodes",
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/internal-data-bridge",
+      "packageJson": {
+        "name": "internal-data-bridge",
+        "description": "An internal Gatsby plugin which creates data nodes from internal data",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "42f6019e3cb20eb471a9080fede4d0bb",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "f795702c-a3b8-5a88-88ee-5d06019d44fa": {
+      "resolve": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "id": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "name": "prod-404",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreatePage"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/prod-404",
+      "packageJson": {
+        "name": "prod-404",
+        "description": "Internal plugin to detect various flavors of 404 pages and ensure there's a 404.html path created as well to ensure compatability with static hosts",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "4f91c101376d1908827ac625078e469f",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "84dad27f-1d44-51fc-ac56-4db2e5222995": {
+      "resolve": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "id": "84dad27f-1d44-51fc-ac56-4db2e5222995",
+      "name": "query-runner",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/query-runner",
+      "packageJson": {
+        "name": "query-runner",
+        "description": "Internal plugin for running queries",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "ef406d2248fe39aa2932423be2c27ca2",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "6f4b2fa9-66b5-5205-a03f-140005a2cfe5": {
+      "resolve": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing",
+      "id": "6f4b2fa9-66b5-5205-a03f-140005a2cfe5",
+      "name": "webpack-theme-component-shadowing",
+      "version": "1.0.0",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "onCreateWebpackConfig"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby/dist/internal-plugins/webpack-theme-component-shadowing",
+      "packageJson": {
+        "name": "webpack-theme-component-shadowing",
+        "description": "An internal Gatsby plugin which handles configuring webpack to ensure theme components fall back from the user's site to theme modules.",
+        "version": "1.0.0",
+        "main": "index.js",
+        "author": "Chris Biscardi <chris@christopherbiscardi.com>",
+        "license": "MIT",
+        "dependencies": [],
+        "devDependencies": [],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "a6e99b7e04b9e3ca14579c10164b78f7",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "2e97a99f-292f-560c-9105-eb94b974c5b9": {
+      "resolve": "/var/www/krav/node_modules/gatsby-source-instagram",
+      "id": "2e97a99f-292f-560c-9105-eb94b974c5b9",
+      "name": "gatsby-source-instagram",
+      "version": "0.2.5",
+      "pluginOptions": {
+        "plugins": [],
+        "username": "krav_maga_tuzla"
+      },
+      "nodeAPIs": [
+        "sourceNodes"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby-source-instagram",
+      "packageJson": {
+        "name": "gatsby-source-instagram",
+        "description": "Gatsby source plugin for fetching instagram posts",
+        "version": "0.2.5",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Orestis Ioannou",
+          "email": "oorestisime@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/preset-env",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "axios",
+            "version": "^0.18.0"
+          },
+          {
+            "name": "cheerio",
+            "version": "^1.0.0-rc.2"
+          },
+          {
+            "name": "gatsby-source-filesystem",
+            "version": "^2.0.16"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": ">2.0.0-alpha"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "268f064a146488c89079d0a46b8907d3",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1943ff2f-9c0c-558d-8d0c-006603e8106a": {
+      "resolve": "/var/www/krav/node_modules/gatsby-plugin-react-helmet",
+      "id": "1943ff2f-9c0c-558d-8d0c-006603e8106a",
+      "name": "gatsby-plugin-react-helmet",
+      "version": "3.0.11",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby-plugin-react-helmet",
+      "packageJson": {
+        "name": "gatsby-plugin-react-helmet",
+        "description": "Manage document head data with react-helmet. Provides drop-in server rendering support for Gatsby.",
+        "version": "3.0.11",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "react-helmet",
+          "seo",
+          "document",
+          "head",
+          "title",
+          "meta",
+          "link",
+          "script",
+          "base",
+          "noscript",
+          "style"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "matthews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          },
+          {
+            "name": "react-helmet",
+            "version": "^5.1.3"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "8e230c1a14f41783788907708bf7635d",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "ad55e2f0-bccd-5843-8a19-09d299bb172b": {
+      "resolve": "/var/www/krav/node_modules/gatsby-plugin-manifest",
+      "id": "ad55e2f0-bccd-5843-8a19-09d299bb172b",
+      "name": "gatsby-plugin-manifest",
+      "version": "2.0.25",
+      "pluginOptions": {
+        "plugins": [],
+        "name": "GatsbyJS",
+        "short_name": "GatsbyJS",
+        "start_url": "/",
+        "background_color": "#6b37bf",
+        "theme_color": "#6b37bf",
+        "display": "standalone",
+        "icon": "static/icons/icon.png",
+        "include_favicon": true
+      },
+      "nodeAPIs": [
+        "onPostBootstrap"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [
+        "onRenderBody"
+      ],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby-plugin-manifest",
+      "packageJson": {
+        "name": "gatsby-plugin-manifest",
+        "description": "Gatsby plugin which adds a manifest.webmanifest to make sites progressive web apps",
+        "version": "2.0.25",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "favicon",
+          "icons",
+          "manifest.webmanifest",
+          "progressive-web-app",
+          "pwa"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "sharp",
+            "version": "^0.21.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.15"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "9e85a81500745ac709ad7a73277fad81",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "63e5f7ff-e5f1-58f7-8e2c-55872ac42281": {
+      "resolve": "/var/www/krav/node_modules/gatsby-plugin-offline",
+      "id": "63e5f7ff-e5f1-58f7-8e2c-55872ac42281",
+      "name": "gatsby-plugin-offline",
+      "version": "2.0.25",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [
+        "createPages",
+        "onPostBuild"
+      ],
+      "browserAPIs": [
+        "registerServiceWorker",
+        "onServiceWorkerActive",
+        "onPostPrefetchPathname"
+      ],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby-plugin-offline",
+      "packageJson": {
+        "name": "gatsby-plugin-offline",
+        "description": "Gatsby plugin which sets up a site to be able to run offline",
+        "version": "2.0.25",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin",
+          "offline",
+          "precache",
+          "service-worker"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "cheerio",
+            "version": "^1.0.0-rc.2"
+          },
+          {
+            "name": "idb-keyval",
+            "version": "^3.1.0"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "workbox-build",
+            "version": "^3.6.3"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cpx",
+            "version": "^1.5.0"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.1.4"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.100"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "6300ade766f154c1dd4f8a76665bf6e2",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "7374ebf2-d961-52ee-92a2-c25e7cb387a9": {
+      "resolve": "/var/www/krav",
+      "id": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "name": "default-site-plugin",
+      "version": "ee737f6fb9f7ff457409c2804ad591f2",
+      "pluginOptions": {
+        "plugins": []
+      },
+      "nodeAPIs": [],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav",
+      "packageJson": {
+        "name": "gatsby-starter-hello-world",
+        "description": "A simplified bare-bones starter for Gatsby",
+        "version": "0.1.0",
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "axios",
+            "version": "^0.18.0"
+          },
+          {
+            "name": "facebook-plugins",
+            "version": "^1.0.5"
+          },
+          {
+            "name": "gatsby",
+            "version": "^2.1.4"
+          },
+          {
+            "name": "gatsby-plugin-manifest",
+            "version": "^2.0.25"
+          },
+          {
+            "name": "gatsby-plugin-offline",
+            "version": "^2.0.23"
+          },
+          {
+            "name": "gatsby-plugin-react-helmet",
+            "version": "^3.0.6"
+          },
+          {
+            "name": "gatsby-source-facebook",
+            "version": "^1.0.2"
+          },
+          {
+            "name": "gatsby-source-instagram",
+            "version": "^0.2.5"
+          },
+          {
+            "name": "prop-types",
+            "version": "^15.7.2"
+          },
+          {
+            "name": "react",
+            "version": "^16.8.2"
+          },
+          {
+            "name": "react-dom",
+            "version": "^16.8.2"
+          },
+          {
+            "name": "react-helmet",
+            "version": "^5.2.0"
+          },
+          {
+            "name": "react-linkify",
+            "version": "^0.2.2"
+          },
+          {
+            "name": "react-redux",
+            "version": "^6.0.0"
+          },
+          {
+            "name": "react-swipe",
+            "version": "^6.0.4"
+          },
+          {
+            "name": "redux",
+            "version": "^4.0.1"
+          },
+          {
+            "name": "swipe-js-iso",
+            "version": "^2.1.5"
+          },
+          {
+            "name": "underscore",
+            "version": "^1.9.1"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "gh-pages",
+            "version": "^2.0.1"
+          },
+          {
+            "name": "terser",
+            "version": "^3.16.1"
+          }
+        ],
+        "peerDependencies": [],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "93c0126873c0f4745061e320ae904fe0",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "1967dc8b-4b95-5d37-8015-d638420cc49a": {
+      "resolve": "/var/www/krav/node_modules/gatsby-plugin-page-creator",
+      "id": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "name": "gatsby-plugin-page-creator",
+      "version": "2.0.12",
+      "pluginOptions": {
+        "plugins": [],
+        "path": "/var/www/krav/src/pages",
+        "pathCheck": false
+      },
+      "nodeAPIs": [
+        "createPagesStatefully"
+      ],
+      "browserAPIs": [],
+      "ssrAPIs": [],
+      "pluginFilepath": "/var/www/krav/node_modules/gatsby-plugin-page-creator",
+      "packageJson": {
+        "name": "gatsby-plugin-page-creator",
+        "description": "Gatsby plugin that automatically creates pages from React components in specified directories",
+        "version": "2.0.12",
+        "main": "index.js",
+        "keywords": [
+          "gatsby",
+          "gatsby-plugin"
+        ],
+        "author": {
+          "name": "Kyle Mathews",
+          "email": "mathews.kyle@gmail.com"
+        },
+        "license": "MIT",
+        "dependencies": [
+          {
+            "name": "@babel/runtime",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "bluebird",
+            "version": "^3.5.0"
+          },
+          {
+            "name": "chokidar",
+            "version": "2.1.2"
+          },
+          {
+            "name": "fs-exists-cached",
+            "version": "^1.0.0"
+          },
+          {
+            "name": "glob",
+            "version": "^7.1.1"
+          },
+          {
+            "name": "lodash",
+            "version": "^4.17.10"
+          },
+          {
+            "name": "micromatch",
+            "version": "^3.1.10"
+          },
+          {
+            "name": "parse-filepath",
+            "version": "^1.0.1"
+          },
+          {
+            "name": "slash",
+            "version": "^1.0.0"
+          }
+        ],
+        "devDependencies": [
+          {
+            "name": "@babel/cli",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "@babel/core",
+            "version": "^7.0.0"
+          },
+          {
+            "name": "babel-preset-gatsby-package",
+            "version": "^0.1.4"
+          },
+          {
+            "name": "cross-env",
+            "version": "^5.0.5"
+          }
+        ],
+        "peerDependencies": [
+          {
+            "name": "gatsby",
+            "version": "^2.0.0"
+          }
+        ],
+        "optionalDependecies": [],
+        "bundledDependecies": []
+      },
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "cc8878c9c31fa87c0fc21d24a7714462",
+        "type": "SitePlugin",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "Site": {
+      "siteMetadata": {
+        "title2": "Krav Maga Tuzla",
+        "siteUrl": "https://kravmagatuzla.ba/",
+        "facebook": "https://www.facebook.com/408588132922283",
+        "instagram": "https://www.instagram.com/krav_maga_tuzla/",
+        "title": "Redefine your life...",
+        "aboutus": "Klub „KRAV MAGA TUZLA“ je počeo kao neformalna grupa, koja je okupljala sportiste, koji su se aktivno bavili borilačkom vještinom Krav Maga i prenosili svoje znanje svim zainteresovanim mladim osobama. U fokusu kluba je borilačka vještina \"Krav Maga\", sa prilagođenim kursevima u zavisnosti od vašeg spola, fizičkih predispozicija i uzrasta. Mimo toga, naš cilj je okupljanje mladih zaljubljenik u sport i borilačke vještine, te promociju značaja bavljenja sportom za poboljšanje fizičkog i mentalnog zdravlja i promociju značaja okupljanja mladih ljudi sa istim ili sličnim interesima."
+      },
+      "port": "8000",
+      "host": "localhost",
+      "pathPrefix": "/kravmagatuzla.ba",
+      "polyfill": true,
+      "buildTime": "2019-03-28T12:09:59.869Z",
+      "id": "Site",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "contentDigest": "f289406cd24fde0bb23bb0a6dcbb5cca",
+        "type": "Site",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "bf1fd227-311d-55b5-be33-fa7b245d2bf0": {
+      "id": "bf1fd227-311d-55b5-be33-fa7b245d2bf0",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "fa2915f7b9707be59f4d25a3d1fcb97a",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/9004c24a6515c085ae9dd81839a2e094/5D4312EB/t51.2885-15/e35/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/7431fa66eddbe5eb4d8833e8aae825ec/53736483_132567281161669_6344718901858413856_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/7431fa66eddbe5eb4d8833e8aae825ec/53736483_132567281161669_6344718901858413856_n.jpg",
+      "extension": "jpg",
+      "size": 84604,
+      "prettySize": "84.6 kB",
+      "modifiedTime": "2019-03-28T00:47:18.844Z",
+      "accessTime": "2019-03-28T00:47:18.292Z",
+      "changeTime": "2019-03-28T00:47:18.856Z",
+      "birthTime": "2019-03-28T00:47:18.856Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/7431fa66eddbe5eb4d8833e8aae825ec",
+      "base": "53736483_132567281161669_6344718901858413856_n.jpg",
+      "ext": ".jpg",
+      "name": "53736483_132567281161669_6344718901858413856_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/7431fa66eddbe5eb4d8833e8aae825ec",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914028,
+      "blocks": 168,
+      "atimeMs": 1553734038291.7668,
+      "mtimeMs": 1553734038843.7698,
+      "ctimeMs": 1553734038855.77,
+      "birthtimeMs": 1553734038855.77,
+      "atime": "2019-03-28T00:47:18.292Z",
+      "mtime": "2019-03-28T00:47:18.844Z",
+      "ctime": "2019-03-28T00:47:18.856Z",
+      "birthtime": "2019-03-28T00:47:18.856Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/9004c24a6515c085ae9dd81839a2e094/5D4312EB/t51.2885-15/e35/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "BvhhUXynAaK": {
+      "id": "BvhhUXynAaK",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "339acac386e06ebdd8218eda9745d8c3",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 118,
+      "caption": "Sretna prva jubilarna godisnjica Krav Maga IKMI Kluba. ❤️",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/dbdb87bc7423b0b3ce6eb529a69f55dc/5D4CA7A4/t51.2885-15/e35/c135.0.810.810/s150x150/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/5d2dd7a30e741da8383b2f7b456dba6c/5D4D4AEE/t51.2885-15/e35/c135.0.810.810/s240x240/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/2749bc0ec0095c1cfd402679963e6955/5D42D454/t51.2885-15/e35/c135.0.810.810/s320x320/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/acb21b2ea251b3805ba3cd590f0a6eea/5D47330E/t51.2885-15/e35/c135.0.810.810/s480x480/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/fdc883010d93324d25fdefb173df2ba5/5D4116AE/t51.2885-15/sh0.08/e35/c135.0.810.810/s640x640/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphImage",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/408a8c3bbaafc8b43247fad443ae7523/5D4312EB/t51.2885-15/e35/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/408a8c3bbaafc8b43247fad443ae7523/5D4312EB/t51.2885-15/e35/53736483_132567281161669_6344718901858413856_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1553715471,
+      "dimensions": {
+        "height": 810,
+        "width": 1080
+      },
+      "comments": 1,
+      "localFile___NODE": "bf1fd227-311d-55b5-be33-fa7b245d2bf0"
+    },
+    "0474f40d-64a5-54a3-bdc4-08cbb276ed48": {
+      "id": "0474f40d-64a5-54a3-bdc4-08cbb276ed48",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "2ca4eae194c0b794c0db5052efa0a07d",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/e2ac1014bb885d5de75f393932280694/5D4DD2F7/t51.2885-15/e35/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/b12a118d3c6ae1b7681f26e9a1d3238b/42622163_339781393422001_210055823862509523_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/b12a118d3c6ae1b7681f26e9a1d3238b/42622163_339781393422001_210055823862509523_n.jpg",
+      "extension": "jpg",
+      "size": 48602,
+      "prettySize": "48.6 kB",
+      "modifiedTime": "2019-03-28T00:47:18.896Z",
+      "accessTime": "2019-03-28T00:47:18.296Z",
+      "changeTime": "2019-03-28T00:47:18.900Z",
+      "birthTime": "2019-03-28T00:47:18.900Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/b12a118d3c6ae1b7681f26e9a1d3238b",
+      "base": "42622163_339781393422001_210055823862509523_n.jpg",
+      "ext": ".jpg",
+      "name": "42622163_339781393422001_210055823862509523_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/b12a118d3c6ae1b7681f26e9a1d3238b",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914114,
+      "blocks": 96,
+      "atimeMs": 1553734038295.7668,
+      "mtimeMs": 1553734038895.7703,
+      "ctimeMs": 1553734038899.7703,
+      "birthtimeMs": 1553734038899.7703,
+      "atime": "2019-03-28T00:47:18.296Z",
+      "mtime": "2019-03-28T00:47:18.896Z",
+      "ctime": "2019-03-28T00:47:18.900Z",
+      "birthtime": "2019-03-28T00:47:18.900Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/e2ac1014bb885d5de75f393932280694/5D4DD2F7/t51.2885-15/e35/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "BqKOUvdhpKA": {
+      "id": "BqKOUvdhpKA",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "bcdc4d04e5b53efb901c61168cedfa1d",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 54,
+      "caption": "Pozivamo vas da naučite vještinu samoodbrane i zaštite sebe i svoje najmilije\n\nModeran tempo života stavlja pred vas razne izazove. Osim održanja fizčke kondicije, dobro bi bilo da savladate i vještinu samoodbrane i tako zaštite sebe i ljude koje volite.\n\nPredlažemo vam sistem samoodbrane Krav Maga, koji je nastao 30-tih godina prošlog stoljeća. Krav Maga je univerzalna vještina i treninzi su pogodni za sve bez obzira na starost i spol. Navedeni sistem samoobrane se temelji na prirodnim reakcijama čovjeka i njegovim refleksnim pokretima i shodno tome sve tehnike koje Krav Maga obuhvata su realne i situacijskog su karaktera.\n\nPozivamo vas da nam se pridružite jer KRAV MAGA- IKMI Tuzla, je jedini klub ove borilačke vještine na našem području.\n\nTreninzi se održavaju ponedjeljkom, srijedom od 18:00 te subotom od 9 sati u prostorijama Fakulteta za tjelesni odgoj i sport (DIF), a voditelj tečaja je Mirza Malkočević, licencirani instruktor Krav Mage.\n\nViše informacija o načinu učlanjena možete pronaći na našoj stranici ili nas pozovite na broj tel. 061 998 742\n\nDobro nam došli!",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/1a51ddfc5c3ebf7b372899c43d102274/5D4CB0DB/t51.2885-15/e35/c120.0.479.479/s150x150/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/009705fc69ae9bd68f8eb29ca1b41461/5D38036E/t51.2885-15/e35/c120.0.479.479/s240x240/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/5d0695bed5c3f656bfd30c8309e992ed/5D3862D6/t51.2885-15/e35/c120.0.479.479/s320x320/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/aa1c2af95d7554325a3dc302f64bdd7e/5D47E3CC/t51.2885-15/e35/c120.0.479.479/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/aa1c2af95d7554325a3dc302f64bdd7e/5D47E3CC/t51.2885-15/e35/c120.0.479.479/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphImage",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/f58da02641b652c1647daed224ae7e35/5D4DD2F7/t51.2885-15/e35/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/f58da02641b652c1647daed224ae7e35/5D4DD2F7/t51.2885-15/e35/42622163_339781393422001_210055823862509523_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1542196342,
+      "dimensions": {
+        "height": 498,
+        "width": 750
+      },
+      "localFile___NODE": "0474f40d-64a5-54a3-bdc4-08cbb276ed48"
+    },
+    "1a321929-394b-50e9-b9b9-cdc0e10cbb15": {
+      "id": "1a321929-394b-50e9-b9b9-cdc0e10cbb15",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "33f1b8a09072b8a56ee53890b8eb440c",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/69c2d8b42be3b248dd8c320a813f5105/5D4FD4E2/t51.2885-15/e35/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/8ce7d42d718115950a52fffd6808210c/41001026_2037319029651260_5564514846353452534_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/8ce7d42d718115950a52fffd6808210c/41001026_2037319029651260_5564514846353452534_n.jpg",
+      "extension": "jpg",
+      "size": 51991,
+      "prettySize": "52 kB",
+      "modifiedTime": "2019-03-28T00:47:19.604Z",
+      "accessTime": "2019-03-28T00:47:18.300Z",
+      "changeTime": "2019-03-28T00:47:19.608Z",
+      "birthTime": "2019-03-28T00:47:19.608Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/8ce7d42d718115950a52fffd6808210c",
+      "base": "41001026_2037319029651260_5564514846353452534_n.jpg",
+      "ext": ".jpg",
+      "name": "41001026_2037319029651260_5564514846353452534_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/8ce7d42d718115950a52fffd6808210c",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914137,
+      "blocks": 104,
+      "atimeMs": 1553734038299.7668,
+      "mtimeMs": 1553734039603.774,
+      "ctimeMs": 1553734039607.7742,
+      "birthtimeMs": 1553734039607.7742,
+      "atime": "2019-03-28T00:47:18.300Z",
+      "mtime": "2019-03-28T00:47:19.604Z",
+      "ctime": "2019-03-28T00:47:19.608Z",
+      "birthtime": "2019-03-28T00:47:19.608Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/69c2d8b42be3b248dd8c320a813f5105/5D4FD4E2/t51.2885-15/e35/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "Bn9QOMth8QT": {
+      "id": "Bn9QOMth8QT",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "fa25fd4e477f38278632cd6d9ecc4243",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 111,
+      "caption": "KRAV MAGA KIDS",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/a07573c10782d985d8bb43a54061c678/5D33BF37/t51.2885-15/e35/c135.0.810.810a/s150x150/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/0df4a1451d75b2f6a50366daf577882a/5D395631/t51.2885-15/e35/c135.0.810.810a/s240x240/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/eb3bb2a6458b10746e2ca8f7306dbddb/5D4D834F/t51.2885-15/e35/c135.0.810.810a/s320x320/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/9b620b69d58afc7bd84f38d53acbacc1/5D485A08/t51.2885-15/e35/c135.0.810.810a/s480x480/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/148a15ae19008a833b288f4f70e0fbd1/5D457170/t51.2885-15/sh0.08/e35/c135.0.810.810a/s640x640/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphImage",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/a97633b82092732042921af0e7548573/5D4FD4E2/t51.2885-15/e35/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/a97633b82092732042921af0e7548573/5D4FD4E2/t51.2885-15/e35/41001026_2037319029651260_5564514846353452534_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1537466162,
+      "dimensions": {
+        "height": 810,
+        "width": 1080
+      },
+      "localFile___NODE": "1a321929-394b-50e9-b9b9-cdc0e10cbb15"
+    },
+    "1825c648-289b-5ba9-bf79-787f0ad839f2": {
+      "id": "1825c648-289b-5ba9-bf79-787f0ad839f2",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "048d87bde2856701b356f331dff5a1f9",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/035b5cee3fac0f6195b2cbad49da82fa/5D36FE65/t51.2885-15/e35/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/cf3e8d129df525e8a125d1f15a1ddbc2/46413958_2138821442824326_5926174801064214019_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/cf3e8d129df525e8a125d1f15a1ddbc2/46413958_2138821442824326_5926174801064214019_n.jpg",
+      "extension": "jpg",
+      "size": 42382,
+      "prettySize": "42.4 kB",
+      "modifiedTime": "2019-03-28T00:47:19.756Z",
+      "accessTime": "2019-03-28T00:47:18.296Z",
+      "changeTime": "2019-03-28T00:47:19.756Z",
+      "birthTime": "2019-03-28T00:47:19.756Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/cf3e8d129df525e8a125d1f15a1ddbc2",
+      "base": "46413958_2138821442824326_5926174801064214019_n.jpg",
+      "ext": ".jpg",
+      "name": "46413958_2138821442824326_5926174801064214019_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/cf3e8d129df525e8a125d1f15a1ddbc2",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914115,
+      "blocks": 88,
+      "atimeMs": 1553734038295.7668,
+      "mtimeMs": 1553734039755.775,
+      "ctimeMs": 1553734039755.775,
+      "birthtimeMs": 1553734039755.775,
+      "atime": "2019-03-28T00:47:18.296Z",
+      "mtime": "2019-03-28T00:47:19.756Z",
+      "ctime": "2019-03-28T00:47:19.756Z",
+      "birthtime": "2019-03-28T00:47:19.756Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/035b5cee3fac0f6195b2cbad49da82fa/5D36FE65/t51.2885-15/e35/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "Bqpl1IWg2c-": {
+      "id": "Bqpl1IWg2c-",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "d3368832d71b0febca65e46414540af2",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 52,
+      "caption": "Poštovani roditelji ... vi snosite odgovornost za prave odabire u životu svoje djece ... odaberite ispravno, priključite ih našem timu - KRAV MAGA KIDS Lipnica :) ➡️➡️➡️ Treninzi se održavaju svakog utorka i četvrtka od 19h i traju sat vremena. ☑️ Sve što vam je potrebno jesu crna trenerka, majica i patike, a mi vam obećavamo dobru zabavu i druženje u sportskom duhu. ➕ Za sva dodatna pitanja možete se obratiti treneru Mirzi na broj 061 998 742\n\nDobro nam došli!!",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/7db18788d02a1cb418eac7966a052397/5D384645/t51.2885-15/e35/c120.0.479.479/s150x150/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/e36d8a07d71ca89f7c4101c1a5d4345a/5D4E6A43/t51.2885-15/e35/c120.0.479.479/s240x240/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/e2918868fb049ddee6f3ad3a31bef2a0/5D399B3D/t51.2885-15/e35/c120.0.479.479/s320x320/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/07d35b03f64fa67ddb0ad8a947d5fd4f/5D31CA9D/t51.2885-15/e35/c120.0.479.479/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/07d35b03f64fa67ddb0ad8a947d5fd4f/5D31CA9D/t51.2885-15/e35/c120.0.479.479/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphImage",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/38da391f2b5bc1bf17e452e6ed311a6a/5D36FE65/t51.2885-15/e35/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/38da391f2b5bc1bf17e452e6ed311a6a/5D36FE65/t51.2885-15/e35/46413958_2138821442824326_5926174801064214019_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1543248854,
+      "dimensions": {
+        "height": 498,
+        "width": 750
+      },
+      "localFile___NODE": "1825c648-289b-5ba9-bf79-787f0ad839f2"
+    },
+    "8dfe1e86-ebe0-5670-8f38-4b8cf84ab9f7": {
+      "id": "8dfe1e86-ebe0-5670-8f38-4b8cf84ab9f7",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "3717c876b0f31f9fd76a13ef5d61637d",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/b7ac1ef311d4b3595fa00eb95375af26/5D1349A3/t51.2885-15/e35/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/fe57e20354c7bd8aafc19a0a773f7da6/47694401_358992744903518_3781502784807127830_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/fe57e20354c7bd8aafc19a0a773f7da6/47694401_358992744903518_3781502784807127830_n.jpg",
+      "extension": "jpg",
+      "size": 89233,
+      "prettySize": "89.2 kB",
+      "modifiedTime": "2019-03-28T00:47:19.760Z",
+      "accessTime": "2019-03-28T00:47:18.296Z",
+      "changeTime": "2019-03-28T00:47:19.768Z",
+      "birthTime": "2019-03-28T00:47:19.768Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/fe57e20354c7bd8aafc19a0a773f7da6",
+      "base": "47694401_358992744903518_3781502784807127830_n.jpg",
+      "ext": ".jpg",
+      "name": "47694401_358992744903518_3781502784807127830_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/fe57e20354c7bd8aafc19a0a773f7da6",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914078,
+      "blocks": 176,
+      "atimeMs": 1553734038295.7668,
+      "mtimeMs": 1553734039759.775,
+      "ctimeMs": 1553734039767.775,
+      "birthtimeMs": 1553734039767.775,
+      "atime": "2019-03-28T00:47:18.296Z",
+      "mtime": "2019-03-28T00:47:19.760Z",
+      "ctime": "2019-03-28T00:47:19.768Z",
+      "birthtime": "2019-03-28T00:47:19.768Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/b7ac1ef311d4b3595fa00eb95375af26/5D1349A3/t51.2885-15/e35/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "BsDwxqLh1Io": {
+      "id": "BsDwxqLh1Io",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "75d2636ef536fdbb687063fa4b50f6f4",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 49,
+      "caption": "Novogodisnji praznik se priblizava, a s njim dolaze i neizbjezne novogodisnje odluke.\nNeka jedna od korisnih odluka bude da nam se pridružite.\nNemojte se puno opustiti jer Krav Maga KIDS kreće sa treninzima već u četvrtak, 03.01.2019. godine u 19 sati, a Krav Maga Tuzla počinje sa jutarnjim treningom u subotu 05.01.2019. godine u 9 sati. \nKRAV MAGA IKMI TUZLA vam želi sretnu i uspješnu Novu godinu!",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/cd7d38cbb202a8fdeefd15d91bc364f3/5D339D7C/t51.2885-15/e35/c257.0.566.566/s150x150/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/35b71fb2318ac0fa43b6a6f9b18390c8/5D433A36/t51.2885-15/e35/c257.0.566.566/s240x240/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/7b5f07aa04463cca1667fb198dc6fee0/5D2C698C/t51.2885-15/e35/c257.0.566.566/s320x320/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/8b5210471da181284f0880b900340049/5D2FFBD6/t51.2885-15/e35/c257.0.566.566/s480x480/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/1858e8782534380ccd5492e29096326c/5D14970C/t51.2885-15/e35/c257.0.566.566/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphImage",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/3901e9093b6b64efdeb88108d9d51960/5D3AD6A3/t51.2885-15/e35/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/3901e9093b6b64efdeb88108d9d51960/5D3AD6A3/t51.2885-15/e35/47694401_358992744903518_3781502784807127830_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1546274491,
+      "dimensions": {
+        "height": 566,
+        "width": 1080
+      },
+      "localFile___NODE": "8dfe1e86-ebe0-5670-8f38-4b8cf84ab9f7"
+    },
+    "1fe15822-d038-5e64-909e-ef02a3b68573": {
+      "id": "1fe15822-d038-5e64-909e-ef02a3b68573",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "f7847906b3e1705f0f4e9ea0a4d62ca7",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/6125e584dc550fa9b119c980b0b23942/5D358FA3/t51.2885-15/e35/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/85b179b8e683adbfe74bcd8b941a424d/40602635_466906537150928_4791049466144732078_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/85b179b8e683adbfe74bcd8b941a424d/40602635_466906537150928_4791049466144732078_n.jpg",
+      "extension": "jpg",
+      "size": 66232,
+      "prettySize": "66.2 kB",
+      "modifiedTime": "2019-03-28T00:47:19.772Z",
+      "accessTime": "2019-03-28T00:47:18.300Z",
+      "changeTime": "2019-03-28T00:47:19.776Z",
+      "birthTime": "2019-03-28T00:47:19.776Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/85b179b8e683adbfe74bcd8b941a424d",
+      "base": "40602635_466906537150928_4791049466144732078_n.jpg",
+      "ext": ".jpg",
+      "name": "40602635_466906537150928_4791049466144732078_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/85b179b8e683adbfe74bcd8b941a424d",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914207,
+      "blocks": 136,
+      "atimeMs": 1553734038299.7668,
+      "mtimeMs": 1553734039771.775,
+      "ctimeMs": 1553734039775.775,
+      "birthtimeMs": 1553734039775.775,
+      "atime": "2019-03-28T00:47:18.300Z",
+      "mtime": "2019-03-28T00:47:19.772Z",
+      "ctime": "2019-03-28T00:47:19.776Z",
+      "birthtime": "2019-03-28T00:47:19.776Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/6125e584dc550fa9b119c980b0b23942/5D358FA3/t51.2885-15/e35/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "Bnx7Fkph_9q": {
+      "id": "Bnx7Fkph_9q",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "b3b30e014f53256ff05975585ea5a83e",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 37,
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/5b9bd2130cc92180f6ec35b813dbbd2d/5D15F7E1/t51.2885-15/e35/s150x150/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/45cb8e0997155bd80ecd5f5254459b89/5D2935AB/t51.2885-15/e35/s240x240/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/8ac2246bd05c509c817011bdadc0cc09/5D47D411/t51.2885-15/e35/s320x320/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/ccae6158bd50e1d242b564beb576df49/5D35D44B/t51.2885-15/e35/s480x480/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/99a65fe9d6c77377ac51cbb70f846af8/5D4A0946/t51.2885-15/sh0.08/e35/s640x640/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphSidecar",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/9183952f3bc176b0b7ce6846fdf674af/5D358FA3/t51.2885-15/e35/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/9183952f3bc176b0b7ce6846fdf674af/5D358FA3/t51.2885-15/e35/40602635_466906537150928_4791049466144732078_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1537085983,
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "comments": 1,
+      "localFile___NODE": "1fe15822-d038-5e64-909e-ef02a3b68573"
+    },
+    "2d161c26-c391-572a-99fc-ba372394a48c": {
+      "id": "2d161c26-c391-572a-99fc-ba372394a48c",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "0920bfa98fdce3baf5d775c1c8e740a3",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/7f66d9b16bdf7701829d04e281f14068/5D168B34/t51.2885-15/e35/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/36409fe970576c4b9499333eb9551a72/41120883_289722078286855_3977219423405340586_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/36409fe970576c4b9499333eb9551a72/41120883_289722078286855_3977219423405340586_n.jpg",
+      "extension": "jpg",
+      "size": 72137,
+      "prettySize": "72.1 kB",
+      "modifiedTime": "2019-03-28T00:47:19.792Z",
+      "accessTime": "2019-03-28T00:47:18.304Z",
+      "changeTime": "2019-03-28T00:47:19.796Z",
+      "birthTime": "2019-03-28T00:47:19.796Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/36409fe970576c4b9499333eb9551a72",
+      "base": "41120883_289722078286855_3977219423405340586_n.jpg",
+      "ext": ".jpg",
+      "name": "41120883_289722078286855_3977219423405340586_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/36409fe970576c4b9499333eb9551a72",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914208,
+      "blocks": 144,
+      "atimeMs": 1553734038303.7668,
+      "mtimeMs": 1553734039791.7751,
+      "ctimeMs": 1553734039795.7751,
+      "birthtimeMs": 1553734039795.7751,
+      "atime": "2019-03-28T00:47:18.304Z",
+      "mtime": "2019-03-28T00:47:19.792Z",
+      "ctime": "2019-03-28T00:47:19.796Z",
+      "birthtime": "2019-03-28T00:47:19.796Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/7f66d9b16bdf7701829d04e281f14068/5D168B34/t51.2885-15/e35/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "Bnvc13JBZjy": {
+      "id": "Bnvc13JBZjy",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "001938eef7a8438e704fd04b82f33225",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 83,
+      "caption": "Uzivo sa seminara Krav-Maga u Tuzli\nwww.kravmaga.ba",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/8675764899095f3fbbe75283e62a6546/5D422C76/t51.2885-15/e35/s150x150/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/ee4ba307161d277d81a45b9a8f277d04/5D4AB93C/t51.2885-15/e35/s240x240/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/e3273f4bb9408d944c3497495937ae39/5D4C5786/t51.2885-15/e35/s320x320/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/eeee4aa734c607ed2307ee6638c9e297/5D3904DC/t51.2885-15/e35/s480x480/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/aff0e2690b9a565cff95409638e3ed1a/5D3729D1/t51.2885-15/sh0.08/e35/s640x640/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphSidecar",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/f09a242f988ba2818812e3017efcf3a5/5D168B34/t51.2885-15/e35/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/f09a242f988ba2818812e3017efcf3a5/5D168B34/t51.2885-15/e35/41120883_289722078286855_3977219423405340586_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1537003017,
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "comments": 1,
+      "localFile___NODE": "2d161c26-c391-572a-99fc-ba372394a48c"
+    },
+    "92d2a9a3-65b7-552e-8dc5-7d4f08b88d6e": {
+      "id": "92d2a9a3-65b7-552e-8dc5-7d4f08b88d6e",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "02ef46d92bdbf3d30a3e0299138a42f8",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/f7a38c3c4907344f1ff2a5d927fb1db1/5D4C5422/t51.2885-15/e35/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/31a8b1aeda206d5131e9bcd130d3b9f2/40634216_929675773890726_6336374709571762464_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/31a8b1aeda206d5131e9bcd130d3b9f2/40634216_929675773890726_6336374709571762464_n.jpg",
+      "extension": "jpg",
+      "size": 92257,
+      "prettySize": "92.3 kB",
+      "modifiedTime": "2019-03-28T00:47:19.872Z",
+      "accessTime": "2019-03-28T00:47:18.304Z",
+      "changeTime": "2019-03-28T00:47:19.876Z",
+      "birthTime": "2019-03-28T00:47:19.876Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/31a8b1aeda206d5131e9bcd130d3b9f2",
+      "base": "40634216_929675773890726_6336374709571762464_n.jpg",
+      "ext": ".jpg",
+      "name": "40634216_929675773890726_6336374709571762464_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/31a8b1aeda206d5131e9bcd130d3b9f2",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914234,
+      "blocks": 184,
+      "atimeMs": 1553734038303.7668,
+      "mtimeMs": 1553734039871.7756,
+      "ctimeMs": 1553734039875.7756,
+      "birthtimeMs": 1553734039875.7756,
+      "atime": "2019-03-28T00:47:18.304Z",
+      "mtime": "2019-03-28T00:47:19.872Z",
+      "ctime": "2019-03-28T00:47:19.876Z",
+      "birthtime": "2019-03-28T00:47:19.876Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/f7a38c3c4907344f1ff2a5d927fb1db1/5D4C5422/t51.2885-15/e35/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "Bnk86SgBLjE": {
+      "id": "Bnk86SgBLjE",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "b3f534e1966d52b31a54d9616a851084",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 20,
+      "caption": "NISTE ZAKASNILI SA PRIJAVOM!!! Internacionalni KRAV MAGA seminar 15. i 16. septembra u Tuzli\n\nŽelite li saznati kako možete brzo i efikasno naučiti da se odbranite od nasilnika?\n\nKRAV MAGA TUZLA, klub samoodbrane iz Tuzle u saradnji sa IKMI sportskom Krav Maga federacijom Europske Unije organizuje seminar samoodbrane 15. i 16. septembra 2018 godine.\n\nSeminar će se održati u Tuzli, a teme treninga na seminaru u toku 2 dana održavanja obraditi će tehnike samoodbrane za žene, bazne Krav Maga tehnike, tehnike odbrane od neposredne prijetnje i napada nožem i palicom te KAPAP (operativni trening Krav Maga). Seminar će se realizovati u prostorijama Fakulteta za tjelesni odgoj i sport u Tuzli. Trening na seminaru će voditi iskusni internacionalni IKMI ekspert Matteo Moreo inače dugogodšnji sportski instruktori samoodbrane i Krav Maga.\nDodatan poziv na učešće na seminaru upućujemo ženskoj populaciji, s obzirom da će se na seminaru posebna pažnja posvetiti tehnikama samoodbrane u svakodnevnim životnim situacijama.\n\nSvi zainteresovani za učešće na seminaru sa i bez prethodnog iskustva sa borilačkom vještinom Krav Maga su dobrodošli, a prijaviti se mogu na facebook stranici KRAV MAGA IKMI Tuzla ili na broj telefona 061 998 742.",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/e421381f472c9186448b7e63a52cc560/5D48FBDF/t51.2885-15/e35/c0.90.720.720/s150x150/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/b1ebb15aaec942fb1f9e86108110f800/5D16AF95/t51.2885-15/e35/c0.90.720.720/s240x240/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/03d50598d61300ce6cb8250abad94a4d/5D4D702F/t51.2885-15/e35/c0.90.720.720/s320x320/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/0904d029b90e7257dc4445d0e2976720/5D2F8475/t51.2885-15/e35/c0.90.720.720/s480x480/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/b4fb7b7d76ff5662566ef682c2cfa14d/5D37D196/t51.2885-15/sh0.08/e35/c0.90.720.720/s640x640/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphImage",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/7158f10e8b0096591626064b28df1e48/5D4C5422/t51.2885-15/e35/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/7158f10e8b0096591626064b28df1e48/5D4C5422/t51.2885-15/e35/40634216_929675773890726_6336374709571762464_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1536650731,
+      "dimensions": {
+        "height": 937,
+        "width": 750
+      },
+      "localFile___NODE": "92d2a9a3-65b7-552e-8dc5-7d4f08b88d6e"
+    },
+    "676b603d-b74c-54d3-b6ce-85a8d7d7304d": {
+      "id": "676b603d-b74c-54d3-b6ce-85a8d7d7304d",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "c4bfb9fc1644e95c0d47385956c11864",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/54da378f8a0c9612ab784e1d8abde964/5D308DBE/t51.2885-15/e35/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/a90a5c61a9eb7cb27981adecc42653ca/41424986_300644283856461_6728594861476267479_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/a90a5c61a9eb7cb27981adecc42653ca/41424986_300644283856461_6728594861476267479_n.jpg",
+      "extension": "jpg",
+      "size": 84903,
+      "prettySize": "84.9 kB",
+      "modifiedTime": "2019-03-28T00:47:20.048Z",
+      "accessTime": "2019-03-28T00:47:18.300Z",
+      "changeTime": "2019-03-28T00:47:20.052Z",
+      "birthTime": "2019-03-28T00:47:20.052Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/a90a5c61a9eb7cb27981adecc42653ca",
+      "base": "41424986_300644283856461_6728594861476267479_n.jpg",
+      "ext": ".jpg",
+      "name": "41424986_300644283856461_6728594861476267479_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/a90a5c61a9eb7cb27981adecc42653ca",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914185,
+      "blocks": 168,
+      "atimeMs": 1553734038299.7668,
+      "mtimeMs": 1553734040047.7764,
+      "ctimeMs": 1553734040051.7766,
+      "birthtimeMs": 1553734040051.7766,
+      "atime": "2019-03-28T00:47:18.300Z",
+      "mtime": "2019-03-28T00:47:20.048Z",
+      "ctime": "2019-03-28T00:47:20.052Z",
+      "birthtime": "2019-03-28T00:47:20.052Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/54da378f8a0c9612ab784e1d8abde964/5D308DBE/t51.2885-15/e35/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "BnySzO9hBpX": {
+      "id": "BnySzO9hBpX",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "e9ed0772b01f0f1e34eaa96198a3711c",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 47,
+      "caption": "KRAV MAGA IKMI TUZLA",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/eb4f43f186f7386a978b461b611830b5/5D4457FC/t51.2885-15/e35/s150x150/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/6cec863117b25d471cc4adf4f64ddfc3/5D2E12B6/t51.2885-15/e35/s240x240/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/bacc5a14f3f4fc945c90c464ce8f6070/5D2B4A0C/t51.2885-15/e35/s320x320/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/18fbfe5612da6d96ae8c1cad48a98e6f/5D2E8656/t51.2885-15/e35/s480x480/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/74424bb956b2667eebeedefe037025aa/5D2A645B/t51.2885-15/sh0.08/e35/s640x640/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphSidecar",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/e91b1cf022738f2ecf943e02235b697e/5D308DBE/t51.2885-15/e35/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/e91b1cf022738f2ecf943e02235b697e/5D308DBE/t51.2885-15/e35/41424986_300644283856461_6728594861476267479_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1537098415,
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "localFile___NODE": "676b603d-b74c-54d3-b6ce-85a8d7d7304d"
+    },
+    "fb27fc40-e424-5136-92f5-d3f559fe8fe6": {
+      "id": "fb27fc40-e424-5136-92f5-d3f559fe8fe6",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "ab3c31400088dfe85df427a0b831523e",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/a8013f35e66cf9c10d1122f790c8b248/5D4561CD/t51.2885-15/e35/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/0444399c661bc83b73fd16490676b718/41379167_486984045110758_7480393622198020064_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/0444399c661bc83b73fd16490676b718/41379167_486984045110758_7480393622198020064_n.jpg",
+      "extension": "jpg",
+      "size": 111015,
+      "prettySize": "111 kB",
+      "modifiedTime": "2019-03-28T00:47:20.268Z",
+      "accessTime": "2019-03-28T00:47:18.300Z",
+      "changeTime": "2019-03-28T00:47:20.272Z",
+      "birthTime": "2019-03-28T00:47:20.272Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/0444399c661bc83b73fd16490676b718",
+      "base": "41379167_486984045110758_7480393622198020064_n.jpg",
+      "ext": ".jpg",
+      "name": "41379167_486984045110758_7480393622198020064_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/0444399c661bc83b73fd16490676b718",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914138,
+      "blocks": 224,
+      "atimeMs": 1553734038299.7668,
+      "mtimeMs": 1553734040267.7776,
+      "ctimeMs": 1553734040271.7778,
+      "birthtimeMs": 1553734040271.7778,
+      "atime": "2019-03-28T00:47:18.300Z",
+      "mtime": "2019-03-28T00:47:20.268Z",
+      "ctime": "2019-03-28T00:47:20.272Z",
+      "birthtime": "2019-03-28T00:47:20.272Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/a8013f35e66cf9c10d1122f790c8b248/5D4561CD/t51.2885-15/e35/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "BnzJJ7NhtvQ": {
+      "id": "BnzJJ7NhtvQ",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "5d8b371137245995f001769dead742eb",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 63,
+      "caption": "We had a succesfull seminar this weekend. \nThank you Matteo Moreo for having a great time!!",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/cff72b57fd67ee3a79218004588f4713/5D40DB8F/t51.2885-15/e35/s150x150/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/d6aea2f36143a217cabbd3b26592c42b/5D3542C5/t51.2885-15/e35/s240x240/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/275c8115852e273a734889b95da87923/5D4B7F7F/t51.2885-15/e35/s320x320/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/74c7af65135bbe496c1e47f8b7f92cd0/5D40D425/t51.2885-15/e35/s480x480/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/be5cf409969a4fca1368253d33a3de5f/5D4DC228/t51.2885-15/sh0.08/e35/s640x640/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphSidecar",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/eb05b8130d309da322dbcb56b822ff5f/5D4561CD/t51.2885-15/e35/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/eb05b8130d309da322dbcb56b822ff5f/5D4561CD/t51.2885-15/e35/41379167_486984045110758_7480393622198020064_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1537126913,
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "comments": 1,
+      "localFile___NODE": "fb27fc40-e424-5136-92f5-d3f559fe8fe6"
+    },
+    "d973ea6b-9c55-5183-a051-e1f8670e8d7f": {
+      "id": "d973ea6b-9c55-5183-a051-e1f8670e8d7f",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "bef9967d8c09d6764dcdc02d1e2b57d8",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://scontent-sof1-1.cdninstagram.com/vp/cff751aaa02053c887d749476ec6877a/5D300E74/t51.2885-15/e35/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/cd965dc545a83260d49a86abc01d067b/42331888_2126738967585822_4694081035567583677_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/cd965dc545a83260d49a86abc01d067b/42331888_2126738967585822_4694081035567583677_n.jpg",
+      "extension": "jpg",
+      "size": 223962,
+      "prettySize": "224 kB",
+      "modifiedTime": "2019-03-28T00:47:20.372Z",
+      "accessTime": "2019-03-28T00:47:18.300Z",
+      "changeTime": "2019-03-28T00:47:20.372Z",
+      "birthTime": "2019-03-28T00:47:20.372Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/cd965dc545a83260d49a86abc01d067b",
+      "base": "42331888_2126738967585822_4694081035567583677_n.jpg",
+      "ext": ".jpg",
+      "name": "42331888_2126738967585822_4694081035567583677_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/cd965dc545a83260d49a86abc01d067b",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914116,
+      "blocks": 440,
+      "atimeMs": 1553734038299.7668,
+      "mtimeMs": 1553734040371.7783,
+      "ctimeMs": 1553734040371.7783,
+      "birthtimeMs": 1553734040371.7783,
+      "atime": "2019-03-28T00:47:18.300Z",
+      "mtime": "2019-03-28T00:47:20.372Z",
+      "ctime": "2019-03-28T00:47:20.372Z",
+      "birthtime": "2019-03-28T00:47:20.372Z",
+      "url": "https://scontent-sof1-1.cdninstagram.com/vp/cff751aaa02053c887d749476ec6877a/5D300E74/t51.2885-15/e35/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=scontent-sof1-1.cdninstagram.com"
+    },
+    "Bo4k5Abhtga": {
+      "id": "Bo4k5Abhtga",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "e3e61777af51d5b5e977cb9ea24f067d",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 73,
+      "caption": "KRAV MAGA TOP TEAM <3",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/65a20ae859ee97b13a5985c8d2518e62/5D2F294B/t51.2885-15/e35/s150x150/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/df43b5f9f12f6a8ce1cb94fa36e2a7fb/5D321E4D/t51.2885-15/e35/s240x240/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/db7f23f6a9658ca839827a00087082cb/5D4F8033/t51.2885-15/e35/s320x320/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/5b4c2fd38291450219ed8c5e6705db82/5D353C74/t51.2885-15/e35/s480x480/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/8c4f13bc5695e4adcb2e3f617dc3cbf9/5D15E7CE/t51.2885-15/sh0.08/e35/s640x640/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphSidecar",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/034e799a87cec254207289383b5cb335/5D300E74/t51.2885-15/e35/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/034e799a87cec254207289383b5cb335/5D300E74/t51.2885-15/e35/42331888_2126738967585822_4694081035567583677_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1539456710,
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "localFile___NODE": "d973ea6b-9c55-5183-a051-e1f8670e8d7f"
+    },
+    "ffc4f9e5-748b-511a-9341-439d9a82c019": {
+      "id": "ffc4f9e5-748b-511a-9341-439d9a82c019",
+      "children": [],
+      "parent": null,
+      "internal": {
+        "contentDigest": "cace5e5299ff7ea29164bddfb0d91506",
+        "type": "File",
+        "mediaType": "image/jpeg",
+        "description": "File \"https://instagram.fsjj2-1.fna.fbcdn.net/vp/886d542d1008c3c1fbb39043f252f009/5D4DFF37/t51.2885-15/e35/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net\"",
+        "owner": "gatsby-source-filesystem"
+      },
+      "sourceInstanceName": "__PROGRAMMATIC__",
+      "absolutePath": "/var/www/krav/.cache/gatsby-source-filesystem/e0c28afe847612324ed322cd580180da/54201500_632017673924640_125202793313700111_n.jpg",
+      "relativePath": ".cache/gatsby-source-filesystem/e0c28afe847612324ed322cd580180da/54201500_632017673924640_125202793313700111_n.jpg",
+      "extension": "jpg",
+      "size": 60621,
+      "prettySize": "60.6 kB",
+      "modifiedTime": "2019-03-28T11:10:58.181Z",
+      "accessTime": "2019-03-28T11:10:58.009Z",
+      "changeTime": "2019-03-28T11:10:58.189Z",
+      "birthTime": "2019-03-28T11:10:58.189Z",
+      "root": "/",
+      "dir": "/var/www/krav/.cache/gatsby-source-filesystem/e0c28afe847612324ed322cd580180da",
+      "base": "54201500_632017673924640_125202793313700111_n.jpg",
+      "ext": ".jpg",
+      "name": "54201500_632017673924640_125202793313700111_n",
+      "relativeDirectory": ".cache/gatsby-source-filesystem/e0c28afe847612324ed322cd580180da",
+      "dev": 2053,
+      "mode": 33204,
+      "nlink": 1,
+      "uid": 1000,
+      "gid": 1000,
+      "rdev": 0,
+      "blksize": 4096,
+      "ino": 914287,
+      "blocks": 120,
+      "atimeMs": 1553771458008.6917,
+      "mtimeMs": 1553771458180.6416,
+      "ctimeMs": 1553771458188.6394,
+      "birthtimeMs": 1553771458188.6394,
+      "atime": "2019-03-28T11:10:58.009Z",
+      "mtime": "2019-03-28T11:10:58.181Z",
+      "ctime": "2019-03-28T11:10:58.189Z",
+      "birthtime": "2019-03-28T11:10:58.189Z",
+      "url": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/886d542d1008c3c1fbb39043f252f009/5D4DFF37/t51.2885-15/e35/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net"
+    },
+    "Bvi4vyfn5Bq": {
+      "id": "Bvi4vyfn5Bq",
+      "parent": "__SOURCE__",
+      "internal": {
+        "type": "InstaNode",
+        "contentDigest": "1fa77cd6e860156fe2f1c3612074e23f",
+        "owner": "gatsby-source-instagram"
+      },
+      "children": [],
+      "likes": 47,
+      "caption": "RODITELJI da vam djeca \"ne vise\" na tabletima i telefonima upišite ih u naš klub - KRAV MAGA Kids Lipnica ➡️➡️➡️ Treninzi se održavaju svakog utorka i četvrtka od 19h i traju sat vremena. ☑️ Sve što vam je potrebno jesu crna trenerka, majica i patike, a mi vam obećavamo dobru zabavu i druženje u sportskom duhu. ➕ Za sva dodatna pitanja možete se obratiti treneru Mirzi na broj 061 998 742\n\nDobro nam došli!!",
+      "thumbnails": [
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/d75b1124a9d58fb00d64895c1f3ba0ea/5D4627A5/t51.2885-15/e35/s150x150/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 150,
+          "config_height": 150
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/424e7d675d9f8773e3bceaaf1fe690e7/5D4BA510/t51.2885-15/e35/s240x240/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 240,
+          "config_height": 240
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/00031674a4e96a2daecef855fcaf0643/5D4FA9A8/t51.2885-15/e35/s320x320/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 320,
+          "config_height": 320
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/616aedac0512f23623f20d1a5ffaf253/5D1502F4/t51.2885-15/e35/s480x480/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 480,
+          "config_height": 480
+        },
+        {
+          "src": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/c0613cb31a58b4e4fea9a3ce89adc5f6/5D400044/t51.2885-15/sh0.08/e35/s640x640/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+          "config_width": 640,
+          "config_height": 640
+        }
+      ],
+      "mediaType": "GraphSidecar",
+      "preview": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/886d542d1008c3c1fbb39043f252f009/5D4DFF37/t51.2885-15/e35/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "original": "https://instagram.fsjj2-1.fna.fbcdn.net/vp/886d542d1008c3c1fbb39043f252f009/5D4DFF37/t51.2885-15/e35/54201500_632017673924640_125202793313700111_n.jpg?_nc_ht=instagram.fsjj2-1.fna.fbcdn.net",
+      "timestamp": 1553761308,
+      "dimensions": {
+        "height": 1080,
+        "width": 1080
+      },
+      "localFile___NODE": "ffc4f9e5-748b-511a-9341-439d9a82c019"
+    },
+    "SitePage /404/": {
+      "jsonName": "404-22d",
+      "internalComponentName": "Component404",
+      "path": "/404/",
+      "component": "/var/www/krav/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "isCreatedByStatefulCreatePages": true,
+      "context": {},
+      "pluginCreator___NODE": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "pluginCreatorId": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "componentPath": "/var/www/krav/src/pages/404.js",
+      "id": "SitePage /404/",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "f510a790274ef01a886cba9c6bf2c514",
+        "description": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /contact/": {
+      "jsonName": "contact-26a",
+      "internalComponentName": "ComponentContact",
+      "path": "/contact/",
+      "component": "/var/www/krav/src/pages/contact.js",
+      "componentChunkName": "component---src-pages-contact-js",
+      "isCreatedByStatefulCreatePages": true,
+      "context": {},
+      "pluginCreator___NODE": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "pluginCreatorId": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "componentPath": "/var/www/krav/src/pages/contact.js",
+      "id": "SitePage /contact/",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "b3cf99c6aa78b400b0727edfbd262190",
+        "description": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /": {
+      "jsonName": "index",
+      "internalComponentName": "ComponentIndex",
+      "path": "/",
+      "component": "/var/www/krav/src/pages/index.js",
+      "componentChunkName": "component---src-pages-index-js",
+      "isCreatedByStatefulCreatePages": true,
+      "context": {},
+      "pluginCreator___NODE": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "pluginCreatorId": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "componentPath": "/var/www/krav/src/pages/index.js",
+      "id": "SitePage /",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "dcb60e7b071b8455d64e422a37b78922",
+        "description": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /informacije/": {
+      "jsonName": "informacije-12a",
+      "internalComponentName": "ComponentInformacije",
+      "path": "/informacije/",
+      "component": "/var/www/krav/src/pages/informacije.js",
+      "componentChunkName": "component---src-pages-informacije-js",
+      "isCreatedByStatefulCreatePages": true,
+      "context": {},
+      "pluginCreator___NODE": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "pluginCreatorId": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+      "componentPath": "/var/www/krav/src/pages/informacije.js",
+      "id": "SitePage /informacije/",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "d465a334fdb7320074a27ca8d7d786e4",
+        "description": "1967dc8b-4b95-5d37-8015-d638420cc49a",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /404.html": {
+      "jsonName": "404-html-516",
+      "internalComponentName": "Component404Html",
+      "path": "/404.html",
+      "component": "/var/www/krav/src/pages/404.js",
+      "componentChunkName": "component---src-pages-404-js",
+      "isCreatedByStatefulCreatePages": true,
+      "context": {},
+      "pluginCreator___NODE": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "pluginCreatorId": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+      "componentPath": "/var/www/krav/src/pages/404.js",
+      "id": "SitePage /404.html",
+      "parent": null,
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "8874106e6bb226443d043062033492ca",
+        "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
+        "owner": "internal-data-bridge"
+      }
+    }
+  },
+  "status": {
+    "plugins": {},
+    "PLUGINS_HASH": "609d09beb64e8b1e163944b434bc0877"
+  },
+  "componentDataDependencies": {
+    "nodes": {
+      "Site": [
+        "/",
+        "sq--src-components-site-metadata-js"
+      ]
+    },
+    "connections": {
+      "InstaNode": [
+        "/"
+      ]
+    }
+  },
+  "jsonDataPaths": {
+    "sq--src-components-site-metadata-js": 4287285486,
+    "404-22d": "820/path---404-22-d-bce-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "dev-404-page-5f9": "386/path---dev-404-page-5-f-9-fab-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "contact-26a": "279/path---contact-26-a-cd9-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "termini-b0d": "222/path---termini-b-0-d-c00-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "informacije-12a": "822/path---informacije-12-a-f4b-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "index": "661/path---index-6a9-DjZ6dch2tChnfq47PeyZwvbk",
+    "404-html-516": "285/path---404-html-516-62a-0SUcWyAf8ecbYDsMhQkEfPzV8",
+    "offline-plugin-app-shell-fallback-a30": "604/path---offline-plugin-app-shell-fallback-a-30-c5a-BawJvyh36KKFwbrWPg4a4aYuc8"
+  },
+  "components": {
+    "/var/www/krav/src/pages/404.js": {
+      "componentPath": "/var/www/krav/src/pages/404.js",
+      "query": "",
+      "pages": [
+        "/404/",
+        "/404.html"
+      ],
+      "isInBootstrap": true
+    },
+    "/var/www/krav/src/pages/contact.js": {
+      "componentPath": "/var/www/krav/src/pages/contact.js",
+      "query": "",
+      "pages": [
+        "/contact/"
+      ],
+      "isInBootstrap": true
+    },
+    "/var/www/krav/src/pages/index.js": {
+      "componentPath": "/var/www/krav/src/pages/index.js",
+      "query": "query varWwwKravSrcPagesIndexJs3286405775 {\n  site {\n    siteMetadata {\n      title\n      aboutus\n    }\n  }\n  allInstaNode {\n    edges {\n      node {\n        id\n        likes\n        comments\n        original\n        timestamp\n        caption\n        thumbnails {\n          src\n          config_width\n          config_height\n        }\n        dimensions {\n          height\n          width\n        }\n      }\n    }\n  }\n}\n",
+      "pages": [
+        "/"
+      ],
+      "isInBootstrap": true
+    },
+    "/var/www/krav/src/pages/informacije.js": {
+      "componentPath": "/var/www/krav/src/pages/informacije.js",
+      "query": "",
+      "pages": [
+        "/informacije/"
+      ],
+      "isInBootstrap": true
+    },
+    "/var/www/krav/.cache/dev-404-page.js": {
+      "componentPath": "/var/www/krav/.cache/dev-404-page.js",
+      "query": "",
+      "pages": [
+        "/dev-404-page/"
+      ],
+      "isInBootstrap": true
+    }
+  },
+  "staticQueryComponents": {
+    "sq--src-components-site-metadata-js": {
+      "name": "SiteMetadata",
+      "componentPath": "/var/www/krav/src/components/site-metadata.js",
+      "id": "sq--src-components-site-metadata-js",
+      "jsonName": "sq--src-components-site-metadata-js",
+      "query": "query SiteMetadata {\n  site {\n    siteMetadata {\n      siteUrl\n      title2\n      facebook\n      instagram\n    }\n  }\n}\n",
+      "hash": 4287285486
+    }
+  }
+}

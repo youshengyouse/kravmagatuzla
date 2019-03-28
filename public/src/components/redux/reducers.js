@@ -1,6 +1,6 @@
 const initialState = {
    
-  	slideshow: {number: 0},
+  	slideshow: {number: 0, ready: false, zIndex: 10000},
 	information: {place: "kravMagaTuzla"},
 	large: {status: false, post: false},
 	instagramPostRegistration: {register: [], len: 0}
@@ -25,8 +25,15 @@ const enter = (state = initialState, action) => {
 	return {...state, information: {place: action.place}};
 	case "UPDATE_NUMBER":
 
-	return {...state, slideshow: {number: action.number}};
+	return {...state, slideshow: {...state.slideshow, number: action.number}};
 
+	case "SLIDESHOW_LOADED":
+
+	return {...state, slideshow: {...state.slideshow, ready: true}};
+
+	case "ZINDEX":
+
+	return {...state, slideshow: {...state.slideshow, zIndex: -10000}};
       default:
         return state;
     }

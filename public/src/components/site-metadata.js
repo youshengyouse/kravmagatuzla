@@ -35,6 +35,7 @@ const SiteMetadata = ({ pathname }) => (
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ba" />
         <meta property="og:site_name" content={title2} />
+	<meta property="og:title" content="Krav Maga Tuzla" />
         <meta property="og:image" content={`${siteUrl}/slideshow/0-small.jpg`} />
         <meta property="og:image:width" content="672" />
         <meta property="og:image:height" content="504" />
