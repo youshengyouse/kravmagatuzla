@@ -2,6 +2,71 @@
 @import url('https://fonts.googleapis.com/css?family=Philosopher');
 @import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
+.partneri {
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	text-align: center;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+
+
+}
+
+.partner {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 3rem;
+
+}
+
+.partneri-link {
+
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	opacity: 1;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 500ms;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 500ms;
+	-o-transition-property: opacity;
+	-o-transition-duration: 500ms;
+	cursor: pointer;
+
+}
+
+
+.partneri-link:hover {
+
+	opacity: 0.5;
+
+}
+
+.partner-image {
+
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	align-self: center;
+	margin-bottom: 1rem;
+
+}
+
+.prijatelji {
+
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 2rem;
+	
+
+}
+
 .lds-facebook {
   display: inline-block;
   position: relative;
@@ -462,7 +527,7 @@ body {
 
 .black-background {
 
-	background-color: #000002;
+	background-color: #000000;
 
 }
 
@@ -477,7 +542,7 @@ body {
 
 	width: 100%;
 	height: 100%;
-	background-color: #000004;
+	background-color: #000000;
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -539,7 +604,7 @@ nav a {
 	color: white;
 	padding: 1rem;
 	opacity: 1;
-	background-color: #000004;
+	background-color: #000000;
 	-webkit-transition-property: background-color, color;
 	-moz-transition-property: background-color, color;
 	-o-transition-property: background-color, color;
@@ -568,7 +633,7 @@ nav a:hover {
 
 .slogan {
 
-	font-size: 1.8rem;
+	font-size: 1.6rem;
 	align-self: center;
 	
 }
@@ -608,7 +673,7 @@ nav a:hover {
 	width: 100%;
 	height: 100%;
 	bottom: 0px;
-	background-color: #000004;
+	background-color: #000000;
 	position: absolute;
 	text-align: center;
 	display: flex;
@@ -820,7 +885,7 @@ nav a:hover {
 	background-color: white;
 	text-align: middle;
 	z-index: 200;
-	background-color: #000004;
+	background-color: #000000;
 	
 
 }
@@ -843,7 +908,7 @@ nav a:hover {
 
 .dot {
 
-	background-color: #000004;
+	background-color: #000000;
 	display: inline-block;
 	height: 7px;
 	width: 7px;
@@ -1116,7 +1181,7 @@ nav a:hover {
 
 .footer {
 
-	background-color: #000004;
+	background-color: #000000;
 	color: white;
 	position: relative;
 	padding: 1rem;
@@ -1194,7 +1259,7 @@ nav a:hover {
 
 .instructor-header {
 
-	background-color: #000004;
+	background-color: #000000;
 	padding: 1rem;
 	text-align: center;
 	color: white;
@@ -1204,7 +1269,7 @@ nav a:hover {
 
 .termini {
 
-	background-color: #000002;
+	background-color: #000000;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
@@ -1280,7 +1345,7 @@ nav a:hover {
 	font-weight: bold;
 	padding: 0.5rem;
 	font-size: 1.2rem;
-	color: #000004;
+	color: #000000;
 
 }
 
@@ -1300,7 +1365,7 @@ nav a:hover {
 	font-weight: bold;
 	padding: 0.5rem;
 	font-size: 1rem;
-	color: #000004;
+	color: #000000;
 
 }
 
@@ -1309,7 +1374,7 @@ nav a:hover {
 	color: black;
 	text-decoration: none;
 	text-align: center;
-	color: #000004;
+	color: #000000;
 
 }
 
@@ -1370,7 +1435,7 @@ nav a:hover {
 
 .kontakt-form {
 
-	background-color: #000004;
+	background-color: #000000;
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -1483,7 +1548,7 @@ nav a:hover {
 	grid-template-rows: auto;
 	padding: 2rem;
 	align-items: center;
-	background-color: #000004;
+	background-color: #000000;
 	color: white;
 
 }
@@ -1516,7 +1581,7 @@ nav a:hover {
 
 	padding: 2rem;
 	text-align: center;
-	background-color: #000004;
+	background-color: #000000;
 	color: white;
 
 }
@@ -1587,6 +1652,7 @@ nav a:hover {
 	background-image: url("/kursevi/01.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	display: inline-block;
 	margin: 1rem;
 	margin-top: 0rem;
@@ -1604,6 +1670,7 @@ nav a:hover {
 	background-image: url("/kursevi/02.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	display: inline-block;
 	margin: 1rem;
 	margin-top: 0rem;
@@ -1621,6 +1688,7 @@ nav a:hover {
 	background-image: url("/kursevi/03.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	display: inline-block;
 	margin: 1rem;
 	margin-top: 0rem;
@@ -1636,7 +1704,7 @@ nav a:hover {
 
 	padding: 2rem;
 	color: white;
-	background-color: #000004;
+	background-color: #000000;
 
 
 }
@@ -1662,8 +1730,9 @@ nav a:hover {
 	width: 100%;
 	height: 400px;
 	background-size: cover;
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
+	
 
 
 }
@@ -1674,7 +1743,7 @@ nav a:hover {
 	width: 100%;
 	height: 400px;
 	background-size: cover;
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
 
 
@@ -1993,6 +2062,13 @@ nav a:hover {
 
 		display: block;
 
+	}
+
+	
+	.partneri {
+
+		grid-template-columns: 1fr 1fr;
+	
 	}
 
 

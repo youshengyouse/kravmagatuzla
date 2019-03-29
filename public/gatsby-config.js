@@ -6,7 +6,8 @@ pathPrefix: "/kravmagatuzla.ba",
     facebook: "https://www.facebook.com/408588132922283",
     instagram: "https://www.instagram.com/krav_maga_tuzla/",
     title: `Redefine your life...`,
-    aboutus: `Klub „KRAV MAGA TUZLA“ je počeo kao neformalna grupa, koja je okupljala sportiste, koji su se aktivno bavili borilačkom vještinom Krav Maga i prenosili svoje znanje svim zainteresovanim mladim osobama. U fokusu kluba je borilačka vještina "Krav Maga", sa prilagođenim kursevima u zavisnosti od vašeg spola, fizičkih predispozicija i uzrasta. Mimo toga, naš cilj je okupljanje mladih zaljubljenik u sport i borilačke vještine, te promociju značaja bavljenja sportom za poboljšanje fizičkog i mentalnog zdravlja i promociju značaja okupljanja mladih ljudi sa istim ili sličnim interesima.`, 
+
+    aboutus: `Klub "KRAV MAGA" je klub koji okuplja mlade zaljubljenike u sport i borilačke vještine, a ima za cilj promociju značaja bavljenja sportom za poboljšanje fizičkog i psihičkog zdravlja, te značaja okupljanja mladih ljudi sa istim ili sličnim interesima. U fokusu kluba je borilačka vještina "Krav Maga", sa prilagođenim kursevima u zavisnosti od vašeg spola, fizičkih predispozicija i uzrasta.`, 
 }, 
 
 plugins: [ 

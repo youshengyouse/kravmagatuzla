@@ -259,12 +259,12 @@ class Kontakt extends Component {
 
 		return(<div className="kontakt-container">
 			<div className="kontakt-objasnjenje">
-			<span>Kontaktirati nas mozete:</span>
+			<span>Kontaktirati nas možete:</span>
 			<ul>	
 			<li>Pozivom na broj telefona: <span style={{fontWeight: "bold"}}>+387 61 998 742 (Mirza)</span></li>
-			<li>E-mail: <span style={{fontWeight: "bold"}}><a style={{ color: "black", textDecoration: "none" }} aria-label="mail-to" className="mail-to" href="mailto:mirza@kravmagatuzla.ba" target="_top">mirza@kravmagatuzla.ba</a></span></li>
+			<li>E-mail: <span style={{fontWeight: "bold"}}><a style={{ color: "black", textDecoration: "none" }} aria-label="mail-to" className="mail-to" href="mailto:mirza@kravmagatuzla.ba" target="_blank">mirza@kravmagatuzla.ba</a></span></li>
 			<li>Preko kontakt forme</li>
-			<li><span style={{fontWeight: "bold"}}>Facebook</span> ili <span style={{fontWeight: "bold"}}>Instagram</span></li>
+			<li><span style={{fontWeight: "bold"}}><a style={{ color: "black", textDecoration: "none" }} aria-label="mail-to" className="mail-to" href="https://www.facebook.com/408588132922283/" target="_top">Facebook</a></span> ili <span style={{fontWeight: "bold"}}><a style={{ color: "black", textDecoration: "none" }} aria-label="mail-to" className="mail-to" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank">Instagram</a></span></li>
 			</ul>	
 			<iframe title="facebook krav maga tuzla" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fcategory%2FSports-Team%2FKRAV-MAGA-IKMI-Tuzla-408588132922283%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=372257280226790" width="300" height="500" style={{border:"none", overflow: "hidden"}} scrolling="no" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 			</div>

@@ -55,14 +55,14 @@ class Info2 extends Component {
 		if (this.props.information.place === "kravMagaTuzla") {
 
 			content = <KravMagaTuzla />;
-			kravMagaTuzlaActive = {backgroundColor: "#000004", color: "white"}
+			kravMagaTuzlaActive = {backgroundColor: "#000000", color: "white"}
 
 		}
 
 		if (this.props.information.place === "kravMaga") {
 
 			content = <KravMaga />;
-			kravMagaActive = {backgroundColor: "#000004", color: "white"}
+			kravMagaActive = {backgroundColor: "#000000", color: "white"}
 
 		}
 

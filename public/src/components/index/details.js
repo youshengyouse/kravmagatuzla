@@ -228,7 +228,7 @@ class Slideshow2 extends Component {
 			<i onClick={this.closeImage} className="fas fa-window-close close-instagram-post"></i>
 			<div className="instagram-post-content-caption">
 			<div style={{ marginBottom: "0.5rem", marginTop: "1rem" }}>
-			<a aria-label="krav-maga-tuzla-instagram-post" rel="noopener noreferrer" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank">krav_maga_tuzla
+			<a title="krav_maga_tuzla" aria-label="krav-maga-tuzla-instagram-post" rel="noopener noreferrer" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank">krav_maga_tuzla
 </a></div>
 			<div className="ins-caption"><Linkify properties={{target: '_blank', rel:"noopener noreferrer"}}>{caption}</Linkify></div>
 

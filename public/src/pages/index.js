@@ -1,6 +1,7 @@
 import React from "react";
 import Presentation from "../components/presentation";
 import Information from "../components/index/information";
+import Partneri from "../components/index/partneri";
 import Details from "../components/index/details";
 import { graphql } from "gatsby";
 import { Provider } from "react-redux";
@@ -21,7 +22,7 @@ export default ({data}) => {
 			<div className="second-section">
 			
 			<div className="about-us">
-				<div className="about-us-title about-us-instagram"><a href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+				<div className="about-us-title about-us-instagram"><a title="krav_maga_tuzla" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
 			<div className="instagram-posts">
 			{instagram.map((node, index) => {
 
@@ -34,7 +35,9 @@ export default ({data}) => {
 			</div>
 			</div>
 			</div>
-			</Presentation></Provider>
+			<Partneri />
+			</Presentation>
+			</Provider>
 			</React.Fragment>
 		      )};
 

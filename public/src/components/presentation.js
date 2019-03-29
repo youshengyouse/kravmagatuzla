@@ -22,7 +22,7 @@ class Presentation2 extends Component {
 			number: false,
 			text: false,
 			ready: false,
-			innerWidth: 0
+			innerWidth: false
 
 		}
 
@@ -208,12 +208,22 @@ class Presentation2 extends Component {
 		let zIndex = "flex";
 		let visible = 1;
 		let content;
-		let img = "/slideshow/0.1.jpg";
+		let img;
 
-		if (this.state.innerWidth < 501) {
+		if (this.state.innerWidth) {
 
-			img = "/slideshow/0-small.jpg";
-		
+			if (this.state.innerWidth < 501) {
+
+				img = <img src="/slideshow/0-small.jpg" onLoad={() => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />;
+
+			}
+
+			else {
+
+				img = <img src="/slideshow/0.jpg" onLoad={() => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />;
+
+			}
+
 		}
 
 		if (this.state.ready) {
@@ -254,13 +264,13 @@ class Presentation2 extends Component {
 		}
 
 			content = <React.Fragment>
- <img src={img} onLoad={() => { this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />
+ {img}
 <SiteMetaData />
 <div className="logo-container"><div className="logo-cont"><Link className="logo" to="/" >KRAV MAGA TUZLA</Link></div><nav><Link style={selectedInformacije} to="/informacije">Info</Link><Link style={selectedKontakt} to="/contact">Kontakt</Link></nav></div>
 
 <div className="info">
 
-<div className="introduction"><div className="welcome-text"><span style={text} className="slogan"><span  style={text}  className="small-logo" >Krav Maga IKMI Tuzla</span>{this.props.title}</span><div className="social-media"><a aria-label="facebook" className="facebook" href="https://www.facebook.com/408588132922283/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a> <a aria-label="instagram" className="instagram" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></div> </div></div>
+<div className="introduction"><div className="welcome-text"><span style={text} className="slogan"><span  style={text}  className="small-logo" >Krav Maga IKMI Tuzla</span>{this.props.title}</span><div className="social-media"><a title="Facebook" aria-label="facebook" className="facebook" href="https://www.facebook.com/408588132922283/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a> <a aria-label="instagram" className="instagram" title="krav_maga_tuzla" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></div> </div></div>
 
 <div className="slideshow"><div style={opacity} className="slideshow-container">{this.state.images.map((image, index) => {
 
@@ -292,14 +302,14 @@ return <div className={`slideshow-image slideshow-image${index}`} key={key} styl
 	<span onClick={this.changePicture} id="4" className="dot"></span>
 	<span onClick={this.changePicture} id="5" className="dot"></span>
 	</div>
-	<div className="social-media-small"><a aria-label="facebook" className="facebook" href="https://www.facebook.com/408588132922283/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a> <a  aria-label="instagram" className="instagram" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></div>
+	<div className="social-media-small"><a title="facebook" aria-label="facebook" className="facebook" href="https://www.facebook.com/408588132922283/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a> <a title="krav_maga_tuzla" aria-label="instagram" className="instagram" href="https://www.instagram.com/krav_maga_tuzla/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a></div>
 	</div>
 
 </div>
 
 {this.props.children}
 	<Footer />
-<div style={{ opacity: visible, transitionDuration: "1s", transitionProperty: "opacity", textAling: "center", justifyContent: "center", position: "fixed", top: "0px", bottom: "0px", right: "0px", left: "0px", backgroundColor: "black", zIndex: this.state.zIndex, display: zIndex }} >
+<div style={{ background: `linear-gradient(65deg, rgba(14,14,17,1) 0%, rgba(17,15,15,1) 49%, rgba(10,9,9,1) 100%)`, opacity: visible, transitionDuration: "1s", transitionProperty: "opacity", textAling: "center", justifyContent: "center", position: "fixed", top: "0px", bottom: "0px", right: "0px", left: "0px", backgroundColor: "black", zIndex: this.state.zIndex, display: zIndex }} >
 
 <div style={{ position: "relative", top: "40%" }} className="lds-facebook"><div></div><div></div><div></div></div>
 
