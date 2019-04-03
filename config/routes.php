@@ -6,6 +6,8 @@ use Psr\Container\ContainerInterface;
 use Zend\Expressive\Application;
 use Zend\Expressive\MiddlewareFactory;
 use Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware;
+use Zend\Expressive\Session\SessionMiddleware;
+use Zend\Expressive\Session\SessionPersistenceInterface;
 
 /**
  * Setup routes with a single request method:
@@ -34,9 +36,35 @@ use Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware;
  * );
  */
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
-    $app->get('/', App\Handler\HomePageHandler::class, 'home');
-    $app->get('/informacije', App\Handler\HomePageHandler::class, 'informacije');
-    $app->get('/contact', App\Handler\HomePageHandler::class, 'contact');
+    
+    $app->post('/login', 
+    
+    [App\Handler\LoginHandler::class], 
+    'login');
+
+    $app->post('/gallery/post',
+    
+        [Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware::class,
+        App\Handler\GalleryHandler::class],
+        "galleryPost"
+    
+    );
+
+    $app->post('/gallery/edit',
+    
+    [Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware::class,
+    App\Handler\EditGalleryHandler::class],
+    "galleryEdit"
+
+    );
+
+    $app->post('/gallery/get',
+    
+        [Zend\Expressive\Helper\BodyParams\BodyParamsMiddleware::class,
+        App\Handler\GetGalleryHandler::class],
+        "galleryGet"
+    
+    );
 
     $app->route('/mail', 
     
@@ -47,6 +75,5 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     
     'EmailHandler');
 
-    $app->get('/termini', App\Handler\HomePageHandler::class, 'termini');
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
 };

@@ -37,7 +37,11 @@ class ConfigProvider
             ],
             'factories'  => [
                 Handler\EmailHandler::class => Handler\EmailHandlerFactory::class,
-                Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                Handler\LoginHandler::class => Handler\LoginHandlerFactory::class,
+
+                Handler\GalleryHandler::class => Handler\GalleryHandlerFactory::class,
+                Handler\GetGalleryHandler::class => Handler\GetGalleryHandlerFactory::class,
+                Handler\EditGalleryHandler::class => Handler\EditGalleryHandlerFactory::class
                 
             ],
         ];

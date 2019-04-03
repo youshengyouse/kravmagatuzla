@@ -4,9 +4,11 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
+class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
 {
     public static $files = array (
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'cf97c57bfe0f23854afd2f3818abb7a0' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/create_uploaded_file.php',
         '9bf37a3d0dad93e29cb4e1b1bfab04e9' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_headers_from_sapi.php',
         'ce70dccb4bcc2efc6e94d2ee526e6972' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_method_from_sapi.php',
@@ -15,14 +17,12 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         '0b0974a5566a1077e4f2e111341112c1' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_server.php',
         '1ca3bc274755662169f9629d5412a1da' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_uploaded_files.php',
         '40360c0b9b437e69bcbb7f1349ce029e' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/parse_cookie_header.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'c0c684e103c597a31a3e514398f79ec1' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/double-pass-middleware.php',
         '968cb91a78f08ea033c0e1afe256c864' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/host.php',
         '73f02b5e05532acfb968fa91193a3d17' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/middleware.php',
         '7ba36b1c7d480f53d620df374623203a' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/path.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'f0e119a83772115c43c01dd050fd77a8' => __DIR__ . '/..' . '/zendframework/zend-expressive/src/constants.php',
     );
 
@@ -33,19 +33,18 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         ),
         'Z' => 
         array (
-            'Zend\\Validator\\' => 15,
             'Zend\\Stratigility\\' => 18,
             'Zend\\Stdlib\\' => 12,
+            'Zend\\Session\\' => 13,
             'Zend\\ServiceManager\\' => 20,
-            'Zend\\Mime\\' => 10,
-            'Zend\\Mail\\' => 10,
-            'Zend\\Loader\\' => 12,
+            'Zend\\Hydrator\\' => 14,
             'Zend\\HttpHandlerRunner\\' => 23,
             'Zend\\Expressive\\Twig\\' => 21,
             'Zend\\Expressive\\Tooling\\' => 24,
             'Zend\\Expressive\\Template\\' => 25,
             'Zend\\Expressive\\Router\\' => 23,
             'Zend\\Expressive\\Helper\\' => 23,
+            'Zend\\Expressive\\Authentication\\' => 31,
             'Zend\\Expressive\\' => 16,
             'Zend\\EventManager\\' => 18,
             'Zend\\Escaper\\' => 13,
@@ -53,6 +52,7 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
             'Zend\\ConfigAggregator\\' => 22,
             'Zend\\ComponentInstaller\\' => 24,
             'Zend\\Code\\' => 10,
+            'Zend\\Authentication\\' => 20,
             'ZF\\DevelopmentMode\\' => 19,
             'ZF\\ComposerAutoloading\\' => 23,
         ),
@@ -64,13 +64,13 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         'T' => 
         array (
             'Twig\\' => 5,
-            'TrueBV\\' => 7,
         ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\' => 18,
+            'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\Console\\' => 26,
         ),
         'P' => 
@@ -92,11 +92,25 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         ),
         'D' => 
         array (
+            'Doctrine\\ORM\\' => 13,
+            'Doctrine\\Migrations\\' => 20,
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\DBAL\\Migrations\\' => 25,
+            'Doctrine\\DBAL\\' => 14,
+            'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\Collections\\' => 28,
+            'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\Annotations\\' => 28,
+            'Doctrine\\Common\\' => 16,
             'DeepCopy\\' => 9,
+        ),
+        'C' => 
+        array (
+            'ContainerInteropDoctrine\\' => 25,
         ),
         'A' => 
         array (
+            'Auth\\' => 5,
             'App\\' => 4,
             'AppTest\\' => 8,
         ),
@@ -109,10 +123,6 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
-        'Zend\\Validator\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-validator/src',
-        ),
         'Zend\\Stratigility\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stratigility/src',
@@ -121,21 +131,17 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
         ),
+        'Zend\\Session\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-session/src',
+        ),
         'Zend\\ServiceManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-servicemanager/src',
         ),
-        'Zend\\Mime\\' => 
+        'Zend\\Hydrator\\' => 
         array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-mime/src',
-        ),
-        'Zend\\Mail\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-mail/src',
-        ),
-        'Zend\\Loader\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-loader/src',
+            0 => __DIR__ . '/..' . '/zendframework/zend-hydrator/src',
         ),
         'Zend\\HttpHandlerRunner\\' => 
         array (
@@ -161,6 +167,10 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         'Zend\\Expressive\\Helper\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-expressive-helpers/src',
+        ),
+        'Zend\\Expressive\\Authentication\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-expressive-authentication/src',
         ),
         'Zend\\Expressive\\' => 
         array (
@@ -190,6 +200,10 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
         ),
+        'Zend\\Authentication\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-authentication/src',
+        ),
         'ZF\\DevelopmentMode\\' => 
         array (
             0 => __DIR__ . '/..' . '/zfcampus/zf-development-mode/src',
@@ -210,10 +224,6 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
-        'TrueBV\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/true/punycode/src',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -225,6 +235,10 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         'Symfony\\Contracts\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/contracts',
+        ),
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
         'Symfony\\Component\\Console\\' => 
         array (
@@ -264,13 +278,60 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
+        'Doctrine\\ORM\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM',
+        ),
+        'Doctrine\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/migrations/lib/Doctrine/Migrations',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
         ),
+        'Doctrine\\DBAL\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/migrations/lib/Doctrine/DBAL/Migrations',
+        ),
+        'Doctrine\\DBAL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/dbal/lib/Doctrine/DBAL',
+        ),
+        'Doctrine\\Common\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
+        ),
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
+        ),
+        'Doctrine\\Common\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
+        ),
+        'Doctrine\\Common\\Annotations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/lib/Doctrine/Common',
+            2 => __DIR__ . '/..' . '/doctrine/persistence/lib/Doctrine/Common',
+            3 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
+        ),
         'DeepCopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'ContainerInteropDoctrine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dasprid/container-interop-doctrine/src',
+        ),
+        'Auth\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Auth/src',
         ),
         'App\\' => 
         array (
@@ -292,9 +353,20 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
         ),
         'P' => 
         array (
+            'ProxyManager\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
             'Prophecy\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpspec/prophecy/src',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Lexer\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
             ),
         ),
     );
@@ -1100,10 +1172,10 @@ class ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd7e21ddd2daf05f68b995dd76d4f80ab::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4::$classMap;
 
         }, null, ClassLoader::class);
     }

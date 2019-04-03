@@ -16,6 +16,7 @@ use Zend\Expressive\Twig\TwigRenderer;
 use Zend\Expressive\ZendView\ZendViewRenderer;
 
 use Zend\Mail;
+use Zend\Mail\Transport\Smtp as SmtpTransport;
 
 class EmailHandler implements RequestHandlerInterface
 {
@@ -88,14 +89,20 @@ class EmailHandler implements RequestHandlerInterface
                     $safe_email = filter_var($html_email, FILTER_SANITIZE_STRING);
                     $safe_name = filter_var($htm_name, FILTER_SANITIZE_STRING);
                     $safe_subject = filter_var($html_subject, FILTER_SANITIZE_STRING);
-
+         
                     $mail = new Mail\Message();
+                    
+                    $mail->getHeaders()->addHeaderLine('MIME-Version', '1.0');
+                    $mail->getHeaders()->addHeaderLine('Content-Transfer-Encoding', '8bit');
+                    $mail->getHeaders()->addHeaderLine('X-Mailer:', 'PHP/'.phpversion()
+                    );
                     $mail->setBody($safe_msg);
                     $mail->setFrom($safe_email, $safe_name);
-                    $mail->addTo('kravmagatuzla@outlook.com', 'Mirza Malkocevic');
+                    $mail->setReplyTo('mirza@kravmagatuzla.ba', 'Mirza Malkocevic');
+                    $mail->addTo('mirza@kravmagatuzla.ba', 'Mirza Malkocevic');
                     $mail->setSubject($safe_subject);
 
-                    $transport = new Mail\Transport\Sendmail();
+                    $transport = new SmtpTransport();;
                     $transport->send($mail);
 
                     return new JsonResponse(['sent' => true]);

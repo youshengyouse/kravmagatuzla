@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../components.css";
-import _ from "underscore";
 
 class Partneri extends Component {
 

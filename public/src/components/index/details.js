@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import "../components.css";
-import _ from "underscore";
 import moment from "moment";
 import Linkify from "react-linkify";
+import _ from "underscore";
 
 import { connect } from "react-redux";
 

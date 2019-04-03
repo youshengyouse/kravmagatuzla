@@ -201,7 +201,7 @@ class Presentation2 extends Component {
 	render() {
 
 		let text;
-		let selectedTermini;
+		let selectedBlog;
 		let selectedKontakt;
 		let selectedInformacije;
 		let opacity;
@@ -214,13 +214,13 @@ class Presentation2 extends Component {
 
 			if (this.state.innerWidth < 501) {
 
-				img = <img src="/slideshow/0-small.jpg" onLoad={() => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />;
+				img = <img alt="/slideshow/0-small.jpg" src="/slideshow/0-small.jpg" onLoad={() => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />;
 
 			}
 
 			else {
 
-				img = <img src="/slideshow/0.jpg" onLoad={() => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />;
+				img = <img alt="/slideshow/0-small.jpg" src="/slideshow/0.jpg" onLoad={() => {this.props.dispatch({type: "SLIDESHOW_LOADED"})}} style={{ width: "0px", height: "0px", display: "none"}} />;
 
 			}
 
@@ -247,7 +247,7 @@ class Presentation2 extends Component {
 
 		if (this.props.title === "Termini") {
 
-			selectedTermini = {backgroundColor: "white", color: "black"}
+			selectedBlog = {backgroundColor: "white", color: "black"}
 
 		}
 

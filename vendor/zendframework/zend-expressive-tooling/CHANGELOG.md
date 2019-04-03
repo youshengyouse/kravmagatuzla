@@ -2,6 +2,61 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 1.2.0 - 2019-03-05
+
+### Added
+
+- [#85](https://github.com/zendframework/zend-expressive-tooling/pull/85) adds support for PHP 7.3.
+
+- [#86](https://github.com/zendframework/zend-expressive-tooling/pull/86) adds the ability to provide the `--modules-path` option to the various
+  `module:*` commands via configuration. In each case, if the option is omitted,
+  the command will search for a `Zend\Expressive\Tooling\Module\CommandCommonOptions.--modules-path`
+  configuration entry, and use it if present. When present, calling any of these
+  commands can now omit the `--modules-path` option when a custom path is
+  required.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
+## 1.1.0 - 2019-01-22
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- [#83](https://github.com/zendframework/zend-expressive-tooling/pull/83) fixes behavior when generating template names. The intention was for both
+  namespace separators and TitleCase words to be dash-separated, but the latter
+  previously were not; the patch in this release corrects the behavior. As such,
+  names such as `DbExample` will now correctly map to a template with the name
+  `db-example`.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## 1.0.2 - 2018-11-19
 
 ### Added

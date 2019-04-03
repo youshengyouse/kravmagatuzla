@@ -1,0 +1,23 @@
+
+<IfModule mod_rewrite.c>
+    
+    DirectoryIndex index.html index.php
+    order allow,deny
+    allow from all
+
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !/public/.*
+    RewriteRule ^(.*\.(gif|jpg|png))$ public/$1 [QSA,L]
+    RewriteRule ^(.*)$ public/$1 [NC,L]
+    
+    RewriteRule index\.(php|html??url=$1)$ [PT,L,QSA] [R=301,L]
+
+
+   
+
+
+ </IfModule>

@@ -3,13 +3,17 @@ const initialState = {
   	slideshow: {number: 0, ready: false, zIndex: 10000},
 	information: {place: "kravMagaTuzla"},
 	large: {status: false, post: false},
-	instagramPostRegistration: {register: [], len: 0}
+	instagramPostRegistration: {register: [], len: 0},
+	editorPosts: {posts: [], length: 0, per_page: 5, current_page: 1, ran: false, last: false, total: 0, search: false}
   
 };
 
 const enter = (state = initialState, action) => {
 
     switch (action.type) {
+	
+	// MAIN PAGE GIMMICKS	
+
       case "REGISTER_INSTAGRAM_ITEM":
 		
 		let newRegister = state.instagramPostRegistration.register.slice();
@@ -34,6 +38,97 @@ const enter = (state = initialState, action) => {
 	case "ZINDEX":
 
 	return {...state, slideshow: {...state.slideshow, zIndex: -10000}};
+	
+	// EDITOR CASES
+
+	case "GET_POSTS":
+console.log(action);
+	return {...state, editorPosts: {posts: action.posts, length: action.posts.length, current_page: action.current_page, per_page: state.editorPosts.per_page, ran: action.ran, total: action.total, search: action.search}};	
+	case "REMOVE_IMAGE":
+
+		let posts = state.editorPosts.posts.map((post, index) => {
+
+			if (post.id === action.galleryId) {
+
+				return { ...post, items: post.items.filter((image) => {
+
+					return image.id !==  action.id;
+
+				})}
+
+			}
+
+			else {
+
+				return post;
+
+			}
+
+		});
+
+
+	return {...state, editorPosts: {posts: posts, length: posts.length}};	
+
+	case "REMOVE_GALLERY":
+
+		let newGallery = state.editorPosts.posts.filter((gallery) => {
+
+				return gallery.id !==  action.id;
+
+			});
+
+	return {...state, editorPosts: {posts: newGallery, length: newGallery.length}};
+
+	case "EDIT_TITLE":
+
+			let newGalleryTitle = state.editorPosts.posts.map((gallery) => {
+		
+				let newGallery = gallery;
+
+				if (gallery.id ===  action.id) {
+
+					newGallery.title = action.title;
+			
+				}
+
+				return newGallery;
+			});
+
+	return {...state, editorPosts: { posts: newGalleryTitle, length: newGalleryTitle.length }};
+
+	case "EDIT_DESCRIPTION":
+
+			let newGalleryDescription = state.editorPosts.posts.map((gallery) => {
+		
+				let newGallery = gallery;
+
+				if (gallery.id ===  action.id) {
+
+					newGallery.description = action.description;
+			
+				}
+
+				return newGallery;
+			});
+
+	return {...state, editorPosts: { posts: newGalleryDescription, length: newGalleryDescription.length }};
+
+	case "ADD_IMAGE":
+console.log(action);
+			let newGalleryItem = state.editorPosts.posts.map((gallery) => {
+		
+				let newGallery = gallery;
+
+				if (gallery.id ===  action.id) {
+
+					newGallery.items.push(action.item);
+			
+				}
+
+				return newGallery;
+			});
+console.log(newGalleryItem);
+	return {...state, editorPosts: { ...state.edtiroPosts, posts: newGalleryItem, length: newGalleryItem.length }};
       default:
         return state;
     }
