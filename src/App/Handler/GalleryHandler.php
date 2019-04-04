@@ -175,7 +175,7 @@ class GalleryHandler implements RequestHandlerInterface
 
                 return new JsonResponse([
 
-                    'titleError' => true
+                    'descriptionError' => true
     
                 ]);
 

@@ -66,7 +66,6 @@ class Image2 extends Component {
 					e.target.removeEventListener("click", this.removeGallery);
 					axios.post("/gallery/edit", body).then((res) => {
 
-						console.log(res);
 						this.props.dispatch({ type: "REMOVE_GALLERY", id: this.props.galleryId });
 		
 					}).catch((e) => {console.log(e)});
@@ -89,9 +88,7 @@ class Image2 extends Component {
 
 				axios.post("/gallery/edit", body).then((res) => {
 
-					console.log(res);
 					this.props.dispatch({ type: "REMOVE_IMAGE", id: this.props.item.id, galleryId: this.props.galleryId });
-
 		
 				}).catch((e) => {console.log(e)});
 
@@ -136,6 +133,8 @@ class EditGallery2 extends Component {
 			description: "",
 			editTitle: false,
 			editDescription: false,
+			titleError: false,
+			descriptionError: false,
 			piece: 10
 	
 
@@ -150,7 +149,6 @@ class EditGallery2 extends Component {
 		this.changeTitle = this.changeTitle.bind(this);
 		this.changeDescription = this.changeDescription.bind(this);
 		this.changeTitleEnter = this.changeTitleEnter.bind(this);
-		this.changeDescriptionEnter = this.changeDescriptionEnter.bind(this);
 
 		this.removeGallery = this.removeGallery.bind(this);
 
@@ -191,7 +189,7 @@ class EditGallery2 extends Component {
 	processData: false
   }})
 			.then((res) => {
-console.log(res);
+
 				if (res.data.uploaded) {
 
 					let image = {
@@ -202,7 +200,7 @@ console.log(res);
 						fileName: fileName	
 
 					   };
-console.log(image);
+
 					this.props.dispatch({ type: "ADD_IMAGE", item: image, id: this.props.gallery.id});
 
 				}
@@ -231,9 +229,19 @@ console.log(image);
 
 				axios.post("/gallery/edit", body).then((res) => {
 
-					console.log(res);
-					this.props.dispatch({ type: "EDIT_TITLE", id: this.props.gallery.id, title: value });
-					this.setState({ editTitle: !this.state.editTitle });
+					if (res.data.titleError) {
+
+						this.setState({ titleError: true });
+
+					}
+
+					else {
+
+						this.props.dispatch({ type: "EDIT_TITLE", id: this.props.gallery.id, title: value });
+						this.setState({ title: value, editTitle: !this.state.editTitle, titleError: false });
+
+					}
+
 		
 				}).catch((e) => {console.log(e)});
 
@@ -248,9 +256,20 @@ console.log(image);
 
 					axios.post("/gallery/edit", body).then((res) => {
 
-						console.log(res);
-						this.props.dispatch({ type: "EDIT_DESCRIPTION", id: this.props.gallery.id, description: value });
-						this.setState({ editDescription: !this.state.editDescription });
+						if (res.data.titleError) {
+
+							this.setState({ titleError: true });
+
+						}
+
+						else {
+
+							this.props.dispatch({ type: "EDIT_DESCRIPTION", id: this.props.gallery.id, description: value });
+							this.setState({ description: value, editDescription: !this.state.editDescription, descriptionError: false });
+
+						}
+
+						
 		
 					}).catch((e) => {console.log(e)});
 
@@ -263,12 +282,18 @@ console.log(image);
 
 			let body = {};
 			body.id = this.props.gallery.id;
+			body.directory = this.props.gallery.items[0].directory;
 			body.type = "removeGallery";
-			e.target.removeEventListener("click", this.removeGallery);
-			axios.post("/gallery/edit", body).then((res) => {
 
-				console.log(res);
-				this.props.dispatch({ type: "REMOVE_GALLERY", id: this.props.gallery.id });
+			e.target.removeEventListener("click", this.removeGallery);
+
+			axios.post("/gallery/edit", body).then((res) => {
+				
+				if (res.data.deleted) {
+
+					this.props.dispatch({ type: "REMOVE_GALLERY", id: this.props.gallery.id });
+
+				}
 		
 			}).catch((e) => {console.log(e)});
 
@@ -363,35 +388,6 @@ console.log(image);
 	
 	}
 
-	changeDescriptionEnter(e) {
-
-		let value = e.target.value.trim();
-
-		if (e.key === 'Enter') {
-
-			if (value === this.state.description) {
-
-				this.setState({ editDescription: !this.state.editDescription });
-
-			} else {
-
-				if (value === "" || value.length > 1000) {
-
-
-				}
-
-				else {
-
-					this.ajaxEditDescription(value);
-
-				}
-
-			}
-
-		}
-
-	}
-
 	editTitle() {
 
 		this.setState({ editTitle: !this.state.editTitle });
@@ -425,6 +421,21 @@ console.log(image);
 
 	render() {
 
+		let titleError = {};
+		let descriptionError = {};
+
+		if (this.state.titleError) {
+		
+			titleError = { color: "red" };
+
+		}
+
+		if (this.state.descriptionError) {
+		
+			descriptionError = { color: "red" };
+
+		}
+
 		let title = <span onClick={this.editTitle} title="Click to edit">{this.props.gallery.title}</span>;
 		let description = <span onClick={this.editDescription} title="Click to edit">{this.props.gallery.description}</span>;
 		let slicedGallery = this.props.gallery.items.slice(0, this.state.piece);
@@ -450,13 +461,13 @@ console.log(image);
 
 		if (this.state.editTitle) {
 
-			title = <input onKeyUp={this.changeTitleEnter} onBlur={this.changeTitle} ref={this.input} className="title-input" type="text" defaultValue={this.props.gallery.title} />;
+			title = <input style={titleError} onKeyUp={this.changeTitleEnter} onBlur={this.changeTitle} ref={this.input} className="title-input" type="text" defaultValue={this.props.gallery.title} />;
 
 		}
 
 		if (this.state.editDescription) {
 
-			description = <textarea onKeyUp={this.changeDescriptionEnter} onBlur={this.changeDescription} ref={this.textarea} className="description-input" defaultValue={this.props.gallery.description}></textarea>;
+			description = <textarea style={descriptionError} onBlur={this.changeDescription} ref={this.textarea} className="description-input" defaultValue={this.props.gallery.description}></textarea>;
 
 		}
 
@@ -465,7 +476,7 @@ console.log(image);
 		return (<div className="post">
 			<div className="post-panel">
 			<span style={{fontSize: "0.9rem"}}>
-			{moment(this.props.gallery.date).format('MM/DD/YYYY')}</span>
+			{moment(new Date(this.props.gallery.date)).format('MM/DD/YYYY')}</span>
 			{title}
 			{description}
 			<span onClick={this.removeGallery} title="Remove Gallery" style={{color: "red", cursor: "pointer"}}>Remove</span>

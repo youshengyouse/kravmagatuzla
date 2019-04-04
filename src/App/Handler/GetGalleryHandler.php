@@ -63,7 +63,9 @@ class GetGalleryHandler implements RequestHandlerInterface
 
             if (isset($body["title"])) {
 
-                if ($body["title"] === "" || strlen($body["title"]) > 250 ) {
+                $title = trim($body["title"]);
+
+                if ($title === "" || strlen($title) > 250 ) {
 
                     return new JsonResponse([
 
@@ -78,7 +80,7 @@ class GetGalleryHandler implements RequestHandlerInterface
                     $qbCount->select('count(account.id)')
                     ->from('App\Entity\Blog2', 'account')
                     ->where('account.title LIKE :title')
-                    ->setParameter('title', '%'.$body["title"].'%');
+                    ->setParameter('title', '%'.$title.'%');
 
                     $query->select(Array('g', 'i'))
                     ->from('App\Entity\Blog2', 'g')
@@ -86,7 +88,7 @@ class GetGalleryHandler implements RequestHandlerInterface
                     ->where('g.title LIKE :title')
                     ->addSelect('i')
                     ->setParameter('title', '%'.$body["title"].'%')
-                    ->orderBy('g.date', 'DESC');
+                    ->orderBy('g.date', 'ASC');
 
                 }
 
@@ -101,7 +103,7 @@ class GetGalleryHandler implements RequestHandlerInterface
                 ->from('App\Entity\Blog2', 'g')
                 ->innerJoin('g.items', 'i')
                 ->addSelect('i')
-                ->orderBy('g.date', 'DESC');
+                ->orderBy('g.date', 'ASC');
 
             }
 

@@ -4,7 +4,7 @@ const initialState = {
 	information: {place: "kravMagaTuzla"},
 	large: {status: false, post: false},
 	instagramPostRegistration: {register: [], len: 0},
-	editorPosts: {posts: [], length: 0, per_page: 5, current_page: 1, ran: false, last: false, total: 0, search: false}
+	editorPosts: {posts: [], length: 0, per_page: 5, current_page: 1, ran: false, last_page: false, total: 0, search: false}
   
 };
 
@@ -42,8 +42,8 @@ const enter = (state = initialState, action) => {
 	// EDITOR CASES
 
 	case "GET_POSTS":
-console.log(action);
-	return {...state, editorPosts: {posts: action.posts, length: action.posts.length, current_page: action.current_page, per_page: state.editorPosts.per_page, ran: action.ran, total: action.total, search: action.search}};	
+
+	return {...state, editorPosts: {posts: action.posts, length: action.posts.length, current_page: action.current_page, per_page: state.editorPosts.per_page, ran: action.ran, total: action.total, search: action.search, last_page: action.last_page}};	
 	case "REMOVE_IMAGE":
 
 		let posts = state.editorPosts.posts.map((post, index) => {
@@ -114,7 +114,7 @@ console.log(action);
 	return {...state, editorPosts: { posts: newGalleryDescription, length: newGalleryDescription.length }};
 
 	case "ADD_IMAGE":
-console.log(action);
+
 			let newGalleryItem = state.editorPosts.posts.map((gallery) => {
 		
 				let newGallery = gallery;
@@ -127,7 +127,7 @@ console.log(action);
 
 				return newGallery;
 			});
-console.log(newGalleryItem);
+
 	return {...state, editorPosts: { ...state.edtiroPosts, posts: newGalleryItem, length: newGalleryItem.length }};
       default:
         return state;

@@ -32,6 +32,33 @@ class EditGalleryHandler implements RequestHandlerInterface
 
     }
 
+    private function rm_r($folder,
+    $keepRootFolder = false)
+    {
+        // Handle bad arguments.
+        if (empty($folder) || !file_exists($folder)) {
+            return true; // No such file/folder exists.
+        } elseif (is_file($folder) || is_link($folder)) {
+            return @unlink($folder); // Delete file/link.
+        }
+
+        // Delete all children.
+        $files = new \RecursiveIteratorIterator(
+            new \RecursiveDirectoryIterator($folder, \RecursiveDirectoryIterator::SKIP_DOTS),
+            \RecursiveIteratorIterator::CHILD_FIRST
+        );
+
+        foreach ($files as $fileinfo) {
+            $action = ($fileinfo->isDir() ? 'rmdir' : 'unlink');
+            if (!@$action($fileinfo->getRealPath())) {
+                return false; // Abort due to the failure.
+            }
+        }
+
+        // Delete the root folder itself?
+        return (!$keepRootFolder ? @rmdir($folder) : true);
+    }
+
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
 
@@ -41,6 +68,100 @@ class EditGalleryHandler implements RequestHandlerInterface
         if ( $method === "POST" ) {
 
             $type = $body["type"];
+
+            if ($type === "editTitle") {
+
+                $title = trim($body['value']);
+                $gallery = $body['id'];
+
+                if ($title === "" || strlen($title) > 250 ) {
+
+                    return new JsonResponse([
+
+                        'titleError' => true,
+                 
+                    ]); 
+
+                }
+
+                else {
+
+                    try {
+
+                        $qb = $this->entityManager->createQueryBuilder();
+                        $qb->update('App\Entity\Blog2', 'b');
+                        $qb->where('b.id = :id');
+                        $qb->set('b.title', ':title');
+                        $qb->setParameter('id', $gallery);
+                        $qb->setParameter('title', $title);
+                        $qb->getQuery()->execute();
+
+                        return new JsonResponse([
+
+                            'deleted' => true,
+                 
+                        ]);
+                   
+                    } catch (Exception $e) {
+
+                        return new JsonResponse([
+
+                        'error' => $e->getMessage(),
+                 
+                        ]); 
+
+                    }
+
+                }
+
+            }
+
+            if ($type === "editDescription") {
+
+                $description = trim($body['value']);
+                $gallery = $body['id'];
+
+                if ($description === "" || strlen($description) > 1000 ) {
+
+                    return new JsonResponse([
+
+                        'descriptionError' => true,
+                 
+                    ]); 
+
+                }
+
+                else {
+
+                    try {
+
+                        $qb = $this->entityManager->createQueryBuilder();
+                        $qb->update('App\Entity\Blog2', 'b');
+                        $qb->where('b.id = :id');
+                        $qb->set('b.description', ':description');
+                        $qb->setParameter('id', $gallery);
+                        $qb->setParameter('description', $description);
+                        $qb->getQuery()->execute();
+
+                        return new JsonResponse([
+
+                            'deleted' => true,
+                 
+                        ]);
+                   
+                    } catch (Exception $e) {
+
+                        return new JsonResponse([
+
+                        'error' => $e->getMessage(),
+                 
+                        ]); 
+
+                    }
+
+                }
+                
+            }
 
             if ($type === "removePicture") {
 
@@ -149,6 +270,7 @@ class EditGalleryHandler implements RequestHandlerInterface
     
                         } else {
     
+                                
                             return new JsonResponse([
     
                                 'error' => true,
@@ -164,11 +286,45 @@ class EditGalleryHandler implements RequestHandlerInterface
             
                 } else {
 
-                    return new JsonResponse([
+                    $path = $_SERVER['DOCUMENT_ROOT'] . $body["directory"];
+                    $thumbnailRemove = $this->rm_r($path . "thumbnail");
+                    
+                    if ($thumbnailRemove) {
+
+                            $remove = $this->rm_r($path);
+
+                            if ($remove) {
+
+                                return new JsonResponse([
     
-                        'error' => true,
-                 
-                    ]);
+                                    'deleted' =>   true,
+                                    
+                                ]);
+
+                            }
+
+                            else {
+
+                                return new JsonResponse([
+    
+                                    'error' =>   true,
+                                    
+                                ]);
+
+                            }
+
+                    }
+
+                    else {
+
+                        return new JsonResponse([
+    
+                            'errorThumbnail' => true,
+                     
+                        ]);
+
+                    }
+
 
                 }
 

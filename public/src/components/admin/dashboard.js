@@ -1,9 +1,9 @@
 import React, {Component} from "react";
 import "../components.css";
-import { Link } from "gatsby";A7
+import { Link } from "gatsby";
 import { connect } from "react-redux";
 import SiteMetaData from "../site-metadata";
-import Rosinante from "../Rosinante"76=6=6=6=6=6=6--00000077777777777&&&&&&&7777
+import Rosinante from "../Rosinante";
 
 import EditGallery from "./editor";
 
@@ -39,13 +39,13 @@ class Posts2 extends Component {
 
 	componentWillUnmount() {
 
-			this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: false, last: false, total: 0, search: false });
+			this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: false, last_page: false, total: 0, search: false });
 
 	}
 
 	notVisible() {
 
-		console.log("test");
+		
 
 	}
 
@@ -54,18 +54,17 @@ class Posts2 extends Component {
 		if (this.state.changed !== prevState.changed && prevState.changed === false) {
 
 			this.state.rosinante.callRosinante();
-			console.log("Call Rosinante: Initial");
+	
 
 		}
 
-		if (this.props.editorPosts.ran === true && prevProps.editorPosts.current_page < this.props.editorPosts.current_page && this.state.changed === true) {
+		if (this.props.editorPosts.ran === true && this.props.editorPosts.current_page < this.props.editorPosts.last_page && this.state.changed === true) {
 
 			this.state.rosinante.callRosinante();
-			console.log("Call Rosinante: Second");
 
 		}
 
-		if (prevProps.editorPosts.ran !== this.props.editorPosts.ran && this.state.rosinante === false && prevProps.editorPosts.current_page <= this.props.editorPosts.current_page) {
+		if (prevProps.editorPosts.ran !== this.props.editorPosts.ran && this.state.rosinante === false && prevProps.editorPosts.current_page <= this.props.editorPosts.current_page && this.props.editorPosts.posts.length > 0) {
 
 			this.setState({ rosinante: new Rosinante(
 
@@ -84,14 +83,11 @@ class Posts2 extends Component {
 
 		}
 
-		if (prevProps.editorPosts.current_page === this.props.editorPosts.last_page) {
+		if (this.props.editorPosts.current_page === this.props.editorPosts.last_page) {
 
 			this.state.rosinante.removeRosinante();
-			console.log("Call Rosinante: Remove");
 
 		}
-
-		
 
 
 	}
@@ -122,7 +118,7 @@ class Posts2 extends Component {
 					body.title = title;
 					body.current_page = 1;
 					this.setState({ titleError: false });
-					this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: true, last: false, total: 0, search: false });
+					this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: this.props.editorPosts.ran, last_page: false, total: 0, search: false });
 					this.ajaxCall(body);
 
 				}
@@ -132,7 +128,7 @@ class Posts2 extends Component {
 			else {
 	
 				body.current_page = 1;
-				this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: true, last: false, total: 0, search: false });
+				this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: this.props.editorPosts.ran, last_page: false, total: 0, search: false });
 				this.ajaxCall(body);
 
 			}
@@ -156,7 +152,7 @@ class Posts2 extends Component {
 			}
 
 		}
-console.log(body);
+
 	}
 
 	ajaxCall(body) {
@@ -168,13 +164,24 @@ console.log(body);
 			title = false;
 
 		}
+
+		this.setState({ waiting: true });
 		
 		axios.post("/gallery/get", body)
 			.then((res) => {
-				
+
+				if (res.data.titleError) {
+
+					this.setState({ titleError: true });
+
+				}
+
+				else {
+
+				this.setState({ waiting: false, titleError: false});
 				let currentPage = res.data.pagination.current_page;
 				let lastPage = res.data.pagination.last_page;
-console.log(res);
+
 				if (currentPage === lastPage) {
 
 					let newState = this.props.editorPosts.posts.slice();
@@ -185,7 +192,7 @@ console.log(res);
 
 					    });
 					
-					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: lastPage, ran: true, total: res.data.pagination.total, search: title });
+					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: lastPage, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage });
 
 
 				}
@@ -219,10 +226,12 @@ console.log(res);
 
 					}
 
-					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: currentPage + 1, ran: true, total: res.data.pagination.total, search: title});
+					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: currentPage + 1, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage});
 				
 
 				}
+
+			}
 
 
 			}).catch((e) => {console.log(e)});
@@ -231,7 +240,7 @@ console.log(res);
 
 	render() {
 
-		let waiting = <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
+		let waiting = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
 		let titleError;
 
 		if (this.state.waiting === false) {
@@ -247,20 +256,21 @@ console.log(res);
 		}
 
 		return (<div className="editor">
-			<div className="editor-caller-button" onClick={this.getData}>Edit</div>
+			<div className="editor-caller-button" onClick={this.getData}>Get Galleries</div>
 			<form className="editor-caller-form" onSubmit={this.getData}>
 
 			<input style={titleError} placeholder="Title" type="text" name="title" />
 			<input type="submit" value="Search" />
 
 			</form>
+			<span>{this.props.editorPosts.total}</span>
 			<div className="editor-items">
 			{this.props.editorPosts.posts.map((post, index) => {
 
 				return <EditGallery gallery={post} key={index}/>;
 
 			})}
-			<div ref={this.scrollItem} >{waiting}</div>
+			<div className="waiter" ref={this.scrollItem} >{waiting}</div>
 			</div>
 			</div>
 			);
@@ -399,10 +409,25 @@ class Dashboard extends Component {
   }})
 			.then((res) => {
 
-				title.disabled = false;
-				description.disabled = false;
-				console.log(res);
-				console.log("test");
+				if (res.data.titleError) {
+
+					this.setState({ titleError: true });
+
+				}
+
+				else if (res.data.descriptionError) {
+
+					this.setState({ descriptionError: true });
+
+				}
+
+
+				else {
+					this.setState({ descriptionError: false, titleError: false });
+					title.disabled = false;
+					description.disabled = false;
+						
+				}
 
 			}).catch((e) => {console.log(e)});
 			
@@ -491,6 +516,7 @@ class Dashboard extends Component {
 				
 				</form>
 			</div>
+
 			<Posts />
 			</div>
 			);
