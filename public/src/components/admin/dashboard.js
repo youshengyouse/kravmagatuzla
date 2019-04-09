@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import "../components.css";
-import { Link } from "gatsby";
 import { connect } from "react-redux";
-import SiteMetaData from "../site-metadata";
 import Rosinante from "../Rosinante";
 
 import EditGallery from "./editor";
@@ -24,7 +22,7 @@ class Posts2 extends Component {
 
 			waiting: false,
 			rosinante: false,
-			changed: false,
+			called: false,
 			titleError: false
 
 		}
@@ -39,7 +37,8 @@ class Posts2 extends Component {
 
 	componentWillUnmount() {
 
-			this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: false, last_page: false, total: 0, search: false });
+			this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: false, last_page: Number.POSITIVE_INFINITY, total: 0, search: false });
+			this.state.rosinante.removeRosinante();
 
 	}
 
@@ -51,20 +50,17 @@ class Posts2 extends Component {
 
 	componentDidUpdate(prevProps, prevState) {
 
-		if (this.state.changed !== prevState.changed && prevState.changed === false) {
+		
+		if (this.props.editorPosts.ran === true && this.props.editorPosts.current_page < this.props.editorPosts.last_page && this.state.rosinante !== false && this.state.called === false) {
 
-			this.state.rosinante.callRosinante();
-	
+			
+				this.state.rosinante.callRosinante();
+				this.setState({ called: true });
 
-		}
-
-		if (this.props.editorPosts.ran === true && this.props.editorPosts.current_page < this.props.editorPosts.last_page && this.state.changed === true) {
-
-			this.state.rosinante.callRosinante();
 
 		}
 
-		if (prevProps.editorPosts.ran !== this.props.editorPosts.ran && this.state.rosinante === false && prevProps.editorPosts.current_page <= this.props.editorPosts.current_page && this.props.editorPosts.posts.length > 0) {
+		if (prevProps.editorPosts.ran !== this.props.editorPosts.ran && prevProps.editorPosts.current_page <= this.props.editorPosts.current_page && this.props.editorPosts.posts.length > 0) {
 
 			this.setState({ rosinante: new Rosinante(
 
@@ -79,16 +75,9 @@ class Posts2 extends Component {
 				50,
 				50
 		
-			), changed: true });
+			)});
 
 		}
-
-		if (this.props.editorPosts.current_page === this.props.editorPosts.last_page) {
-
-			this.state.rosinante.removeRosinante();
-
-		}
-
 
 	}
 
@@ -97,7 +86,7 @@ class Posts2 extends Component {
 		let body = {};
 		let title = this.props.editorPosts.search;
 		body.per_page = this.props.editorPosts.per_page;
-		body.current_page = this.props.editorPosts.current_page;
+		body.current_page = this.props.editorPosts.current_page + 1;
 
 		if (e) {
 
@@ -107,7 +96,7 @@ class Posts2 extends Component {
 
 				title = e.target.title.value.trim();
 
-				if (title === "" || title.length > 250 || title === this.props.editorPosts.search) {
+				if (title === "" || title.length > 100 || title === this.props.editorPosts.search) {
 
 					this.setState({ titleError: true });
 
@@ -118,7 +107,7 @@ class Posts2 extends Component {
 					body.title = title;
 					body.current_page = 1;
 					this.setState({ titleError: false });
-					this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: this.props.editorPosts.ran, last_page: false, total: 0, search: false });
+					
 					this.ajaxCall(body);
 
 				}
@@ -128,7 +117,7 @@ class Posts2 extends Component {
 			else {
 	
 				body.current_page = 1;
-				this.props.dispatch({ type: "GET_POSTS", posts: [], per_page: 5, current_page: 1, ran: this.props.editorPosts.ran, last_page: false, total: 0, search: false });
+			
 				this.ajaxCall(body);
 
 			}
@@ -138,16 +127,33 @@ class Posts2 extends Component {
 		else {
 
 			if (title === false) {
+		
+				if (this.props.editorPosts.current_page === this.props.editorPosts.last_page) {
 
-				this.ajaxCall(body);
+
+
+				} else {
+					
+					this.ajaxCall(body);
+
+				}
 
 			}
 
 			else {
 
-				body.title = title;
-				
-				this.ajaxCall(body);
+				if (this.props.editorPosts.posts.length === this.props.editorPosts.total) {
+
+
+
+				} else {
+
+					body.title = title;
+					
+					this.ajaxCall(body);
+
+				}
+
 
 			}
 
@@ -178,7 +184,7 @@ class Posts2 extends Component {
 
 				else {
 
-				this.setState({ waiting: false, titleError: false});
+				this.setState({ waiting: false, titleError: false, called: false});
 				let currentPage = res.data.pagination.current_page;
 				let lastPage = res.data.pagination.last_page;
 
@@ -187,12 +193,36 @@ class Posts2 extends Component {
 					let newState = this.props.editorPosts.posts.slice();
 					    res.data.data.map((post) => {
 
-						
-						newState.push(post);
+							newState.push(post);
+							return post;
 
 					    });
 					
 					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: lastPage, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage });
+
+						let newState2;
+
+						if (title !== this.props.editorPosts.search || body.current_page === 1) {
+
+							newState2 = [];
+					    		res.data.data.map((post) => {
+
+								newState2.push(post);
+								return post;
+
+					    		});
+
+							this.props.dispatch({ type: "GET_POSTS", posts: newState2, current_page: currentPage, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage });
+
+
+						}
+
+						else {
+
+							this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: currentPage, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage });
+
+
+						}
 
 
 				}
@@ -206,8 +236,8 @@ class Posts2 extends Component {
 					    newState = [];
 					    res.data.data.map((post) => {
 
-						
-						newState.push(post);
+							newState.push(post);
+							return post;
 
 					    });
 
@@ -218,15 +248,15 @@ class Posts2 extends Component {
 					    newState = this.props.editorPosts.posts.slice();
 					    res.data.data.map((post) => {
 
-						
-						newState.push(post);
+							newState.push(post);
+							return post;
 
 					    });
 
 
 					}
 
-					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: currentPage + 1, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage});
+					this.props.dispatch({ type: "GET_POSTS", posts: newState, current_page: currentPage, ran: true, total: res.data.pagination.total, search: title, last_page: lastPage});
 				
 
 				}
@@ -240,7 +270,7 @@ class Posts2 extends Component {
 
 	render() {
 
-		let waiting = <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
+		let waiting = <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
 		let titleError;
 
 		if (this.state.waiting === false) {
@@ -261,13 +291,14 @@ class Posts2 extends Component {
 
 			<input style={titleError} placeholder="Title" type="text" name="title" />
 			<input type="submit" value="Search" />
-
+			<div className="total-editor">{this.props.editorPosts.total}</div>
 			</form>
-			<span>{this.props.editorPosts.total}</span>
+			
 			<div className="editor-items">
 			{this.props.editorPosts.posts.map((post, index) => {
 
 				return <EditGallery gallery={post} key={index}/>;
+				
 
 			})}
 			<div className="waiter" ref={this.scrollItem} >{waiting}</div>
@@ -318,7 +349,7 @@ class Dashboard extends Component {
 
 		if (e.target.className === "form-button video") {
 
-			name = "video";
+			name = "images";
 
 		}
 
@@ -340,7 +371,7 @@ class Dashboard extends Component {
 
 		if (type === "title") {
 
-			if (value === "" || value.length > 250) {
+			if (value === "" || value.length > 100) {
 
 				this.setState({titleError: true});
 				return false;
@@ -360,7 +391,7 @@ class Dashboard extends Component {
 		else if (type === "description") {
 
 
-			if (value === "" || this.state.characters > 1000) {
+			if (value === "" || this.state.characters > 500) {
 
 				this.setState({descriptionError: true});
 				return false;
@@ -424,6 +455,9 @@ class Dashboard extends Component {
 
 				else {
 					this.setState({ descriptionError: false, titleError: false });
+					title.value = "";
+					description.value = "";
+					this.fileInput.current.value = "";
 					title.disabled = false;
 					description.disabled = false;
 						
@@ -457,7 +491,7 @@ class Dashboard extends Component {
 		let label;
 		let multiple;
 
-		if (this.state.characters > 1000) {
+		if (this.state.characters > 500) {
 
 			textAreaError = {color: "red"};
 
@@ -509,7 +543,7 @@ class Dashboard extends Component {
 				<input type="text" name="title" />
 				<label style={descriptionError}>Description</label>
 				<textarea name="description" onKeyUp={this.countChars} />
-				<label style={textAreaError}>{this.state.characters}/{1000}</label>
+				<label style={textAreaError}>{this.state.characters}/{500}</label>
 				<label>{label}</label>
 				<input accept="image/x-png, image/gif, image/jpeg" multiple={multiple} style={{ alignSelf: "center", width: "100%"}} type="file" name="files" ref={this.fileInput}  />
 				<input style={{ marginTop: "0.5rem", backgroundColor: "white", padding: "0.5rem", cursor:"pointer" }} type="submit" value="Submit" />

@@ -74,7 +74,7 @@ class EditGalleryHandler implements RequestHandlerInterface
                 $title = trim($body['value']);
                 $gallery = $body['id'];
 
-                if ($title === "" || strlen($title) > 250 ) {
+                if ($title === "" || strlen($title) > 100 ) {
 
                     return new JsonResponse([
 
@@ -121,7 +121,7 @@ class EditGalleryHandler implements RequestHandlerInterface
                 $description = trim($body['value']);
                 $gallery = $body['id'];
 
-                if ($description === "" || strlen($description) > 1000 ) {
+                if ($description === "" || strlen($description) > 500 ) {
 
                     return new JsonResponse([
 
@@ -165,7 +165,7 @@ class EditGalleryHandler implements RequestHandlerInterface
 
             if ($type === "removePicture") {
 
-                $path = $_SERVER['DOCUMENT_ROOT'] . $body["directory"];
+                $path = $_SERVER['DOCUMENT_ROOT'] . "/public" . $body["directory"];
                 $fileName = $body["fileName"];
                 $id = $body["id"];
                 $file = $path . $fileName;
@@ -217,9 +217,9 @@ class EditGalleryHandler implements RequestHandlerInterface
 
             else if ($type === "removeGallery") {
 
-                $path = $_SERVER['DOCUMENT_ROOT'] . $body["directory"];
+                $path = $_SERVER['DOCUMENT_ROOT'] . "/public" . $body["directory"];
                 $id = $body["id"];
-                $thumbnailPath = $_SERVER['DOCUMENT_ROOT'] .$body["directory"] . "/thumbnail";
+                $thumbnailPath = $_SERVER['DOCUMENT_ROOT'] . "/public" . $body["directory"] . "/thumbnail";
 
                 if (isset($body["fileName"])) {
  
@@ -286,7 +286,7 @@ class EditGalleryHandler implements RequestHandlerInterface
             
                 } else {
 
-                    $path = $_SERVER['DOCUMENT_ROOT'] . $body["directory"];
+                    $path = $_SERVER['DOCUMENT_ROOT'] . "/public" . $body["directory"];
                     $thumbnailRemove = $this->rm_r($path . "thumbnail");
                     
                     if ($thumbnailRemove) {
@@ -295,11 +295,28 @@ class EditGalleryHandler implements RequestHandlerInterface
 
                             if ($remove) {
 
-                                return new JsonResponse([
+                                try {
+
+                                    $gallery = $this->entityManager->find('App\Entity\Blog2', $id);
+                                    $this->entityManager->remove($gallery);
+                                    $this->entityManager->flush();
+
+
+                                    return new JsonResponse([
     
-                                    'deleted' =>   true,
+                                        'deleted' =>   true,
                                     
-                                ]);
+                                    ]);
+                                   
+                                } catch (Exception $e) {
+            
+                                    return new JsonResponse([
+            
+                                        'error' => $e->getMessage(),
+                                 
+                                    ]); 
+            
+                                }
 
                             }
 

@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import "../components.css";
-import { Link } from "gatsby";
 import { connect } from "react-redux";
-import SiteMetaData from "../site-metadata";
 import moment from "moment";
 
 import axios from "axios";
@@ -35,7 +33,7 @@ class Image2 extends Component {
 
 	showImage() {
 
-		
+		this.setState({ visible: true });
 
 	}
 	
@@ -49,8 +47,11 @@ class Image2 extends Component {
 				if (post.id === this.props.galleryId) {
 
 					len = post.items.length;
+					return post;
 
 				}
+
+				return post;
 
 			})
 
@@ -113,7 +114,15 @@ class Image2 extends Component {
 
 		}
 
-		return (<React.Fragment><div style={{ opacity: opacity }} className="editor-image" onClick={this.removePicture} title="Click to remove" style={{backgroundImage:`url("${this.props.item.directory}/thumbnail/${this.props.item.fileName}")`}}></div><img onLoad={this.showImage} style={{display: "none"}} src={`${this.props.item.directory}/thumbnail/${this.props.item.fileName}`} /></React.Fragment>);
+		return (<React.Fragment><div 
+		className="editor-image" onClick={onClick} 
+		title="Click to remove" 
+		style={{opacity: opacity, backgroundImage:`url("${this.props.item.directory}/thumbnail/${this.props.item.fileName}")`}}>
+		</div><img onLoad={this.showImage} 
+		alt="galleryimage"
+		style={{display: "none"}} 
+		src={`${this.props.item.directory}/thumbnail/${this.props.item.fileName}`} />
+		</React.Fragment>);
 
 
 	}
@@ -168,7 +177,6 @@ class EditGallery2 extends Component {
 		e.preventDefault();
 
 		let formData = new FormData();
-		let type = this.state.state;
 
 		if (this.fileInput.current.files.length === 1) {
 			
@@ -184,10 +192,13 @@ class EditGallery2 extends Component {
 			formData.append('gallery', this.props.gallery.id);
 			formData.append('directory', this.props.gallery.items[0].directory);
 
-			axios({method: "post", url:"/gallery/post", data: formData, headers: {
-    contentType: false,
-	processData: false
-  }})
+			axios({
+				
+				method: "post", 
+				url:"/gallery/post", 
+				data: formData, 
+				headers: {contentType: false, processData: false}
+			})
 			.then((res) => {
 
 				if (res.data.uploaded) {
@@ -319,7 +330,7 @@ class EditGallery2 extends Component {
 
 		} else {
 
-			if (value === "" || value.length > 250) {
+			if (value === "" || value.length > 100) {
 
 
 			} else {
@@ -344,7 +355,7 @@ class EditGallery2 extends Component {
 
 			} else {
 
-				if (value === "" || value.length > 250) {
+				if (value === "" || value.length > 100) {
 
 
 				} else {
@@ -372,7 +383,7 @@ class EditGallery2 extends Component {
 
 		else {
 
-			if (value === "" || value.length > 1000) {
+			if (value === "" || value.length > 500) {
 
 
 			}
@@ -421,6 +432,7 @@ class EditGallery2 extends Component {
 
 	render() {
 
+		let images;
 		let titleError = {};
 		let descriptionError = {};
 
@@ -453,7 +465,7 @@ class EditGallery2 extends Component {
 
 		}
 
-		if (this.props.gallery.items.length >= 30) {
+		if (this.props.gallery.items.length > 30) {
 
 			add = "";
 
@@ -471,6 +483,18 @@ class EditGallery2 extends Component {
 
 		}
 
+		
+		if (this.props.gallery.type === "images") {
+
+			images = slicedGallery.map((item, index) => {
+
+				return <Image galleryId={this.props.gallery.id} key={index} item={item} />
+
+			});
+
+		}
+
+
 
 
 		return (<div className="post">
@@ -482,12 +506,7 @@ class EditGallery2 extends Component {
 			<span onClick={this.removeGallery} title="Remove Gallery" style={{color: "red", cursor: "pointer"}}>Remove</span>
 			</div>
 			<div className="post-items">
-			{slicedGallery.map((item, index) => {
-
-				
-				return <Image galleryId={this.props.gallery.id} key={index} item={item} />
-
-			})}
+			{images}
 			{more}
 			{add}
 			</div>

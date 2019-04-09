@@ -27,10 +27,10 @@ class LoginHandler implements RequestHandlerInterface
     private $template;
 
     /** @var string */
-    private $username = "???";
+    private $username = "????";
 
     /** @var string */
-    private $password = '???';
+    private $password = '????';
 
     public function __construct(
         string $containerName,

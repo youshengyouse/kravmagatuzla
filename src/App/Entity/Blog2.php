@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Annotations\AnnotationRegistry;
+AnnotationRegistry::registerLoader('class_exists');
 
 /**
  * @ORM\Entity
@@ -48,7 +50,7 @@ class Blog2
      */
 
     private $type;
-
+ 
     /**
      * One product has many features. This is the inverse side.
      * @ORM\OneToMany(targetEntity="Blog", mappedBy="gallery", cascade={"remove", "persist"}, orphanRemoval=true)

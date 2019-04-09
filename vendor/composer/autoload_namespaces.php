@@ -10,4 +10,5 @@ return array(
     'ProxyManager\\' => array($vendorDir . '/ocramius/proxy-manager/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
+    'DoctrineModule\\' => array($vendorDir . '/doctrine/doctrine-module/src'),
 );

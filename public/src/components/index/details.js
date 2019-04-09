@@ -26,9 +26,61 @@ class Slideshow2 extends Component {
 		this.resize = _.throttle(this.trackWindowSize, 400);
 
 		this.showImage = this.showImage.bind(this);
+		this.toggleKeyUp = this.toggleKeyUp.bind(this);
 
 
 	}
+
+	toggleKeyUp(e) {
+		
+		let code = e.keyCode;
+
+		if (code === 39) {
+
+			
+			if (this.state.picture === this.props.slideshow.length - 1 ) {
+
+				this.setState({picture: 0});
+
+			}
+
+			else {
+
+				this.setState({picture:  this.state.picture + 1});
+
+			}
+
+		}
+
+		if (code === 37) {
+
+			
+			
+			if (this.state.picture === 0) {
+
+				this.setState({picture: this.props.slideshow.length - 1});
+
+			}
+
+			else {
+
+				this.setState({picture: this.state.picture - 1});
+
+			}
+
+		}
+
+
+		if (code === 27) {
+
+			document.body.style.overflow = "auto";
+			this.props.dispatch({ type: "TOGGLE_SLIDESHOW", status: false, id: false });
+			e.stopPropagation();
+
+		}
+
+	}
+
 
 	trackWindowSize() {
 
@@ -64,8 +116,6 @@ class Slideshow2 extends Component {
 				this.setState({picture:  this.state.picture + 1});
 
 			}
-
-
 
 
 		}
@@ -126,6 +176,7 @@ class Slideshow2 extends Component {
 		});
 
 		window.addEventListener('resize', this.resize);
+		window.addEventListener('keydown', this.toggleKeyUp);
 		this.trackWindowSize();
 
 
@@ -134,6 +185,7 @@ class Slideshow2 extends Component {
 	componentWillUnmount() {
 
 		window.removeEventListener('resize', this.resize);
+		window.removeEventListener('keydown', this.toggleKeyUp);
 
 	}
 
@@ -389,7 +441,6 @@ class Details2 extends Component {
 		let post = this.props.instagram;
 		let title = post.node.caption;
 		let link = `https://www.instagram.com/p/${post.node.id}/`;
-		let commentIcon;
 		let slideshow;
 		
 		if (!post.node.caption) {

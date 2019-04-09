@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-
 const nativeMax = Math.max;
 const nativeMin = Math.min;
 
@@ -78,12 +76,12 @@ class Rosinante {
 				this.Rosinante.scrollContainer.removeEventListener("scroll", this.throttledHeart);
 
 			}
-
+			
 			this.Rosinante.visible();
 	
 
 		},  () => {
-
+			
 			this.Rosinante.notVisible();
 
 		});

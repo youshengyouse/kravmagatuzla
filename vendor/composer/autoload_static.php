@@ -8,6 +8,7 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '10a6847eba8a430a134fad89f4a30a26' => __DIR__ . '/..' . '/zendframework/zend-cache/autoload/patternPluginManagerPolyfill.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'cf97c57bfe0f23854afd2f3818abb7a0' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/create_uploaded_file.php',
         '9bf37a3d0dad93e29cb4e1b1bfab04e9' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_headers_from_sapi.php',
@@ -17,13 +18,14 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         '0b0974a5566a1077e4f2e111341112c1' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_server.php',
         '1ca3bc274755662169f9629d5412a1da' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_uploaded_files.php',
         '40360c0b9b437e69bcbb7f1349ce029e' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/parse_cookie_header.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         'c0c684e103c597a31a3e514398f79ec1' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/double-pass-middleware.php',
         '968cb91a78f08ea033c0e1afe256c864' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/host.php',
         '73f02b5e05532acfb968fa91193a3d17' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/middleware.php',
         '7ba36b1c7d480f53d620df374623203a' => __DIR__ . '/..' . '/zendframework/zend-stratigility/src/functions/path.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         'f0e119a83772115c43c01dd050fd77a8' => __DIR__ . '/..' . '/zendframework/zend-expressive/src/constants.php',
+        '34901568a1e26d13dd475cb2c85e0284' => __DIR__ . '/..' . '/zendframework/zend-form/autoload/formElementManagerPolyfill.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -33,12 +35,27 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         ),
         'Z' => 
         array (
+            'Zend\\View\\' => 10,
+            'Zend\\Validator\\' => 15,
+            'Zend\\Uri\\' => 9,
             'Zend\\Stratigility\\' => 18,
             'Zend\\Stdlib\\' => 12,
             'Zend\\Session\\' => 13,
             'Zend\\ServiceManager\\' => 20,
+            'Zend\\Router\\' => 12,
+            'Zend\\Paginator\\' => 15,
+            'Zend\\Mvc\\' => 9,
+            'Zend\\ModuleManager\\' => 19,
+            'Zend\\Mime\\' => 10,
+            'Zend\\Mail\\' => 10,
+            'Zend\\Loader\\' => 12,
+            'Zend\\Json\\' => 10,
+            'Zend\\InputFilter\\' => 17,
             'Zend\\Hydrator\\' => 14,
+            'Zend\\Http\\' => 10,
             'Zend\\HttpHandlerRunner\\' => 23,
+            'Zend\\Form\\' => 10,
+            'Zend\\Filter\\' => 12,
             'Zend\\Expressive\\Twig\\' => 21,
             'Zend\\Expressive\\Tooling\\' => 24,
             'Zend\\Expressive\\Template\\' => 25,
@@ -49,9 +66,11 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
             'Zend\\EventManager\\' => 18,
             'Zend\\Escaper\\' => 13,
             'Zend\\Diactoros\\' => 15,
+            'Zend\\Config\\' => 12,
             'Zend\\ConfigAggregator\\' => 22,
             'Zend\\ComponentInstaller\\' => 24,
             'Zend\\Code\\' => 10,
+            'Zend\\Cache\\' => 11,
             'Zend\\Authentication\\' => 20,
             'ZF\\DevelopmentMode\\' => 19,
             'ZF\\ComposerAutoloading\\' => 23,
@@ -64,6 +83,7 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         'T' => 
         array (
             'Twig\\' => 5,
+            'TrueBV\\' => 7,
         ),
         'S' => 
         array (
@@ -75,10 +95,12 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+            'Psr\\Cache\\' => 10,
             'PackageVersions\\' => 16,
         ),
         'I' => 
@@ -123,6 +145,18 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
+        'Zend\\View\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-view/src',
+        ),
+        'Zend\\Validator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-validator/src',
+        ),
+        'Zend\\Uri\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-uri/src',
+        ),
         'Zend\\Stratigility\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stratigility/src',
@@ -139,13 +173,61 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-servicemanager/src',
         ),
+        'Zend\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-router/src',
+        ),
+        'Zend\\Paginator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-paginator/src',
+        ),
+        'Zend\\Mvc\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-mvc/src',
+        ),
+        'Zend\\ModuleManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-modulemanager/src',
+        ),
+        'Zend\\Mime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-mime/src',
+        ),
+        'Zend\\Mail\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-mail/src',
+        ),
+        'Zend\\Loader\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-loader/src',
+        ),
+        'Zend\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-json/src',
+        ),
+        'Zend\\InputFilter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-inputfilter/src',
+        ),
         'Zend\\Hydrator\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-hydrator/src',
         ),
+        'Zend\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-http/src',
+        ),
         'Zend\\HttpHandlerRunner\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-httphandlerrunner/src',
+        ),
+        'Zend\\Form\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-form/src',
+        ),
+        'Zend\\Filter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-filter/src',
         ),
         'Zend\\Expressive\\Twig\\' => 
         array (
@@ -188,6 +270,10 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-diactoros/src',
         ),
+        'Zend\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-config/src',
+        ),
         'Zend\\ConfigAggregator\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-config-aggregator/src',
@@ -199,6 +285,10 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         'Zend\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
+        'Zend\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-cache/src',
         ),
         'Zend\\Authentication\\' => 
         array (
@@ -224,6 +314,10 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
+        'TrueBV\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/true/punycode/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -244,6 +338,10 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -261,6 +359,10 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Psr\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
         'PackageVersions\\' => 
         array (
@@ -367,6 +469,10 @@ class ComposerStaticInitd28083aa1f58177575dbc8ec07c7bbe4
             'Doctrine\\Common\\Lexer\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
+            ),
+            'DoctrineModule\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/doctrine-module/src',
             ),
         ),
     );

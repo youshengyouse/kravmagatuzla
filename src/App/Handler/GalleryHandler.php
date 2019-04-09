@@ -50,7 +50,7 @@ class GalleryHandler implements RequestHandlerInterface
 
         for ($i = 0; $i < $total; $i++) {
 
-            $direc = $_SERVER['DOCUMENT_ROOT'] . $uploadDir;
+            $direc = $_SERVER['DOCUMENT_ROOT'] . "/public" .$uploadDir;
 
             $uploadPath = $direc . $realImg['name'][$i]; 
             $file_tmp = $realImg['tmp_name'][$i]; 
@@ -161,7 +161,7 @@ class GalleryHandler implements RequestHandlerInterface
             $type = trim($body["type"]);
             
 
-            if ($title === "" || strlen($title) > 250) {
+            if ($title === "" || strlen($title) > 100) {
 
                 return new JsonResponse([
 
@@ -171,7 +171,7 @@ class GalleryHandler implements RequestHandlerInterface
 
             }
 
-            else if ($description === "" || strlen($description) > 1000) {
+            else if ($description === "" || strlen($description) > 500) {
 
                 return new JsonResponse([
 
@@ -332,7 +332,7 @@ class GalleryHandler implements RequestHandlerInterface
 
         $uploadDir = '/uploads/' . $image['title'] . str_replace(' ', '', $date) . '/';
 
-        $createDirectory = $_SERVER['DOCUMENT_ROOT'] . $uploadDir;
+        $createDirectory = $_SERVER['DOCUMENT_ROOT'] . "/public" . $uploadDir;
 
         if (!file_exists($createDirectory)) {
 
@@ -347,7 +347,7 @@ class GalleryHandler implements RequestHandlerInterface
 
         for ($i = 0; $i < $total; $i++) {
 
-            $direc = $_SERVER['DOCUMENT_ROOT'] . $uploadDir;
+            $direc = $_SERVER['DOCUMENT_ROOT'] . "/public" . $uploadDir;
 
             $uploadPath = $uploadDirectory . $realImg['name'][$i]; 
             $file_tmp = $realImg['tmp_name'][$i];  
@@ -357,7 +357,7 @@ class GalleryHandler implements RequestHandlerInterface
             if ($type === "images") {
             
                 $img = imagecreatefromstring(file_get_contents($uploadPath));
-                $scaled_img = imagescale($img, 640);
+                $scaled_img = imagescale($img, 400);
                 imagejpeg($scaled_img, $direc . "thumbnail/" . $realImg['name'][$i]);
 
             }
@@ -376,3 +376,4 @@ class GalleryHandler implements RequestHandlerInterface
     }
     
 }
+

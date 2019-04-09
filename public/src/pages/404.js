@@ -7,6 +7,7 @@ export default ({data}) =>  (
 				<div>
 				<div className="navigation-404">
 					<Link to="/" >KRAV MAGA TUZLA</Link>
+					<Link to="/galerija">Galerija</Link>
 					<Link to="/informacije">Info</Link>
 					<Link to="/contact">Kontakt</Link>
 				</div>		

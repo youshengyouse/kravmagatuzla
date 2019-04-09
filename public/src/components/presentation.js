@@ -201,7 +201,7 @@ class Presentation2 extends Component {
 	render() {
 
 		let text;
-		let selectedBlog;
+		let selectedGalerija;
 		let selectedKontakt;
 		let selectedInformacije;
 		let opacity;
@@ -245,9 +245,9 @@ class Presentation2 extends Component {
 
 		}
 
-		if (this.props.title === "Termini") {
+		if (this.props.title === "Galerija") {
 
-			selectedBlog = {backgroundColor: "white", color: "black"}
+			selectedGalerija = {backgroundColor: "white", color: "black"}
 
 		}
 
@@ -266,7 +266,7 @@ class Presentation2 extends Component {
 			content = <React.Fragment>
  {img}
 <SiteMetaData />
-<div className="logo-container"><div className="logo-cont"><Link className="logo" to="/" >KRAV MAGA TUZLA</Link></div><nav><Link style={selectedInformacije} to="/informacije">Info</Link><Link style={selectedKontakt} to="/contact">Kontakt</Link></nav></div>
+<div className="logo-container"><div className="logo-cont"><Link className="logo" to="/" >KRAV MAGA TUZLA</Link></div><nav><Link style={selectedGalerija} to="/galerija">Galerija</Link><Link style={selectedInformacije} to="/informacije">Info</Link><Link style={selectedKontakt} to="/contact">Kontakt</Link></nav></div>
 
 <div className="info">
 

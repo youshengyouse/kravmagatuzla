@@ -37,6 +37,8 @@ use Zend\Expressive\Session\SessionPersistenceInterface;
  */
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
     
+    $app->get('/', App\Handler\HomePageHandler::class, 'home');
+
     $app->post('/login', 
     
     [App\Handler\LoginHandler::class], 
@@ -76,4 +78,5 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     'EmailHandler');
 
     $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
+
 };

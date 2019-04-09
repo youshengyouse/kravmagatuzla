@@ -3,6 +3,7 @@ import Presentation from "../components/presentation";
 import Information from "../components/index/information";
 import Partneri from "../components/index/partneri";
 import Details from "../components/index/details";
+import Gallery from "../components/index/gallery";
 import { graphql } from "gatsby";
 import { Provider } from "react-redux";
 import store from '../components/redux/store';
@@ -19,6 +20,7 @@ export default ({data}) => {
 			return ( <React.Fragment>
 			<Provider store={store}><Presentation location="Krav Maga Tuzla" title={data.site.siteMetadata.title}>
 			<Information aboutus={data.site.siteMetadata.aboutus}/>
+			<Gallery />
 			<div className="second-section">
 			
 			<div className="about-us">

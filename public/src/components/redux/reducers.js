@@ -4,7 +4,9 @@ const initialState = {
 	information: {place: "kravMagaTuzla"},
 	large: {status: false, post: false},
 	instagramPostRegistration: {register: [], len: 0},
-	editorPosts: {posts: [], length: 0, per_page: 5, current_page: 1, ran: false, last_page: false, total: 0, search: false}
+	slideshow2: { status: false, gallery: false },
+	galerija: {posts: [], length: 0, per_page: 8, current_page: 0, ran: false, last_page: Number.POSITIVE_INFINITY, total: 0, search: false},
+	editorPosts: {posts: [], length: 0, per_page: 8, current_page: 0, ran: false, last_page: Number.POSITIVE_INFINITY, total: 0, search: false}
   
 };
 
@@ -14,6 +16,9 @@ const enter = (state = initialState, action) => {
 	
 	// MAIN PAGE GIMMICKS	
 
+      case "TOGGLE_SLIDESHOW2":
+
+        return {...state, slideshow2: { status: action.status, gallery: action.gallery }};
       case "REGISTER_INSTAGRAM_ITEM":
 		
 		let newRegister = state.instagramPostRegistration.register.slice();
@@ -44,6 +49,9 @@ const enter = (state = initialState, action) => {
 	case "GET_POSTS":
 
 	return {...state, editorPosts: {posts: action.posts, length: action.posts.length, current_page: action.current_page, per_page: state.editorPosts.per_page, ran: action.ran, total: action.total, search: action.search, last_page: action.last_page}};	
+	case "GET_POSTS_GALLERY":
+
+	return {...state, galerija: {posts: action.posts, length: action.posts.length, current_page: action.current_page, per_page: state.editorPosts.per_page, ran: action.ran, total: action.total, search: action.search, last_page: action.last_page}};	
 	case "REMOVE_IMAGE":
 
 		let posts = state.editorPosts.posts.map((post, index) => {
@@ -67,7 +75,7 @@ const enter = (state = initialState, action) => {
 		});
 
 
-	return {...state, editorPosts: {posts: posts, length: posts.length}};	
+	return {...state, editorPosts: {...state.editorPosts, posts: posts, length: posts.length}};	
 
 	case "REMOVE_GALLERY":
 
@@ -77,7 +85,7 @@ const enter = (state = initialState, action) => {
 
 			});
 
-	return {...state, editorPosts: {posts: newGallery, length: newGallery.length}};
+	return {...state, editorPosts: {...state.editorPosts, posts: newGallery, length: newGallery.length, total: state.editorPosts.total - 1}};
 
 	case "EDIT_TITLE":
 
@@ -94,7 +102,7 @@ const enter = (state = initialState, action) => {
 				return newGallery;
 			});
 
-	return {...state, editorPosts: { posts: newGalleryTitle, length: newGalleryTitle.length }};
+	return {...state, editorPosts: { ...state.editorPosts, posts: newGalleryTitle, length: newGalleryTitle.length }};
 
 	case "EDIT_DESCRIPTION":
 
@@ -111,7 +119,7 @@ const enter = (state = initialState, action) => {
 				return newGallery;
 			});
 
-	return {...state, editorPosts: { posts: newGalleryDescription, length: newGalleryDescription.length }};
+	return {...state, editorPosts: { ...state.editorPosts, posts: newGalleryDescription, length: newGalleryDescription.length }};
 
 	case "ADD_IMAGE":
 
@@ -128,10 +136,12 @@ const enter = (state = initialState, action) => {
 				return newGallery;
 			});
 
-	return {...state, editorPosts: { ...state.edtiroPosts, posts: newGalleryItem, length: newGalleryItem.length }};
+	return {...state, editorPosts: { ...state.editorPosts, posts: newGalleryItem, length: newGalleryItem.length}};
       default:
         return state;
     }
 };
+
+
 
 export default enter;

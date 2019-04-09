@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import "./admin.css";
 import Dashboard from "./dashboard";
-import { connect } from "react-redux";
 import SiteMetaData from "../site-metadata";
 
 import axios from "axios";
@@ -15,7 +14,7 @@ class Admin extends Component {
 
 			usernameError: false,
 			passwordError: false,
-			loggedIn: true
+			loggedIn: false
 
 		}
 
@@ -31,7 +30,7 @@ class Admin extends Component {
 			let item = unItem.value.trim();
 
 
-			if (item = "" || item.length > 20) {
+			if (item === "" || item.length > 20) {
 
 				if (type === "username") {
 
@@ -185,6 +184,3 @@ class Admin extends Component {
 }
 
 export default Admin;
-
-/*
- */

@@ -227,7 +227,6 @@
 .editor {
 
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	margin-top: 3rem;
 
@@ -339,9 +338,16 @@
 .editor-caller-form {
 
 	text-align: center;
-	margin-bottom: 2rem;
+	margin-bottom: 0.5rem;
 	padding: 0.5rem;
 	border-radius: 5px;
+
+}
+
+.total-editor {
+
+	margin-bottom: 2rem;
+	margin-top: 2rem;
 
 }
 
