@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # Expressive Skeleton and Installer
+=======
+Under Development:
+CMS for Photo Gallery and Video uploads.
+>>>>>>> 5aac8eca86e7069457a7ce794ff928b5d8e2093e
 
 [![Build Status](https://secure.travis-ci.org/zendframework/zend-expressive-skeleton.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-expressive-skeleton)
 [![Coverage Status](https://coveralls.io/repos/github/zendframework/zend-expressive-skeleton/badge.svg?branch=master)](https://coveralls.io/github/zendframework/zend-expressive-skeleton?branch=master)
